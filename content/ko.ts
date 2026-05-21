@@ -54,7 +54,7 @@ export const ko: CVContent = {
       statusNote: "FOUNDER",
       summary: "단톡방의 팀플 업무를 리더가 관리하는 팀 대시보드로.",
       url: "https://teamplo.com",
-      tech: ["Next.js", "Postgres", "Yjs", "CodeMirror 6"],
+      tech: ["Next.js", "PostgreSQL", "Yjs", "CodeMirror 6"],
       logHref: "/log/teamplo-5-weeks",
       detail: {
         problem:

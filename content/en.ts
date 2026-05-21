@@ -54,7 +54,7 @@ export const en: CVContent = {
       statusNote: "FOUNDER",
       summary: "A leader-run team dashboard for university group projects.",
       url: "https://teamplo.com",
-      tech: ["Next.js", "Postgres", "Yjs", "CodeMirror 6"],
+      tech: ["Next.js", "PostgreSQL", "Yjs", "CodeMirror 6"],
       logHref: "/log/teamplo-5-weeks",
       detail: {
         problem:

@@ -50,8 +50,8 @@ Created by /design-consultation on 2026-05-21.
   - `LIVE` — green dot. Genuinely operating. Timeschool only.
   - `BETA` — amber dot. Deployed and usable, pre-commercial. Teamplo, MatchA.
   - `IN DEV` — neutral dot. Demo stage. Defined in the type; currently unused.
-- **Deploy log (Experience + Awards):** mono timestamp in a left gutter, content on the right, hairline dividers.
-  - Awards uses two labeled sub-groups, each rendered in log style: **Competitive Programming** and **Honors & Scholarships**.
+- **Deploy log (Experience + Education):** mono timestamp in a left gutter, content on the right, hairline dividers.
+- **Awards:** two labeled sub-groups (**Competitive Programming**, **Honors & Scholarships**) rendered as a compact list — small text, normal weight, tight rows, no per-row divider. Deliberately lighter than the deploy log so credentials do not outweigh shipped work.
 - **Language toggle + theme toggle:** mono, minimal, in a quiet top bar.
 - **LIVE dot:** soft 2.6s pulse. The one moment of motion that carries meaning.
 
@@ -65,3 +65,4 @@ Created by /design-consultation on 2026-05-21.
 | Date | Decision | Rationale |
 |------|----------|-----------|
 | 2026-05-21 | Initial design system | /design-consultation. Engineered-minimal + shipping-status motif. Light default + dark toggle. Cabinet Grotesk / Geist / Geist Mono / Pretendard. Status taxonomy LIVE/BETA/IN DEV; green reserved for genuinely-live. Researched leerob.com, paco.me, brittanychiang.com. |
+| 2026-05-21 | Removed the About section; Awards demoted to a compact list | About duplicated the Hero one-liner and the evidence in Projects/Experience. Awards rendered in full deploy-log style made 8 credentials outweigh the shipped work — re-rendered as a compact list. Korean body copy unified to terse 개조식. |

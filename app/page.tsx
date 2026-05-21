@@ -76,17 +76,17 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Honors & Awards — two timestamped sub-groups */}
+      {/* Honors & Awards — two sub-groups, rendered as a compact list
+          (lighter than the deploy log, so credentials don't outweigh work) */}
       <Section label={t.sectionLabels.awards} id="awards">
         {t.awards.map((group) => (
           <div key={group.label} className="award-group">
             <div className="award-group-label">{group.label}</div>
             {group.entries.map((entry) => (
-              <LogEntry
-                key={entry.title}
-                time={entry.year}
-                title={entry.title}
-              />
+              <div key={entry.title} className="award-line">
+                <span className="award-yr">{entry.year}</span>
+                <span className="award-title">{entry.title}</span>
+              </div>
             ))}
           </div>
         ))}

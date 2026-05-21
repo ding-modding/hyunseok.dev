@@ -46,3 +46,6 @@ next-env.d.ts
 # gstack tooling state
 /.gstack
 .gstack/
+
+# internal dev log — kept local only, not published
+docs/DEVLOG.md

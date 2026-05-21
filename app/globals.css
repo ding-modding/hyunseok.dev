@@ -680,6 +680,152 @@ button:focus-visible {
   color: var(--accent);
 }
 
+/* === /log list === */
+.log-list {
+  display: flex;
+  flex-direction: column;
+}
+.log-list-row {
+  display: grid;
+  grid-template-columns: 168px 1fr auto;
+  gap: 18px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+}
+.log-list-row:first-of-type {
+  border-top: 1px solid var(--border);
+}
+.log-list-date {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--faint);
+  padding-top: 3px;
+}
+.log-list-main {
+  min-width: 0;
+}
+.log-list-title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  transition: color 0.15s ease;
+}
+.log-list-summary {
+  display: block;
+  font-size: 14.5px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.log-list-arrow {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--faint);
+  transition: color 0.15s ease;
+}
+.log-list-row:hover .log-list-title,
+.log-list-row:hover .log-list-arrow,
+.log-list-row:focus-visible .log-list-title,
+.log-list-row:focus-visible .log-list-arrow {
+  color: var(--accent);
+}
+
+/* === /log post === */
+.log-post {
+  padding-bottom: var(--sp-md);
+}
+.log-post-head {
+  padding: var(--sp-3xl) 0 var(--sp-md);
+}
+.log-post-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 5.5vw, 46px);
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+.log-post-meta {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--faint);
+}
+
+.log-phase {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+}
+.log-phase-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.log-phase-intro {
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 34em;
+  margin-bottom: 16px;
+}
+.log-phase-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.log-phase-item {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.log-phase-item:first-child {
+  border-top: 1px solid var(--border);
+}
+.log-phase-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--faint);
+  padding-top: 2px;
+}
+.log-phase-text {
+  grid-column: 2;
+  font-size: 15px;
+  color: var(--text);
+  max-width: 34em;
+}
+
+.log-diagram {
+  margin: var(--sp-xl) 0 0;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--muted);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.log-post-closing {
+  margin-top: var(--sp-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.log-post-closing p {
+  font-size: 15px;
+  color: var(--text);
+  max-width: 34em;
+}
+
 /* === Section entry motion (minimal-functional) === */
 .fade-in {
   animation: fade-in 0.35s ease-out both;
@@ -709,6 +855,27 @@ button:focus-visible {
   .skill-row {
     grid-template-columns: 1fr;
     gap: 3px;
+  }
+  .log-list-row {
+    grid-template-columns: 1fr auto;
+    gap: 4px 12px;
+  }
+  .log-list-date {
+    grid-row: 2;
+    padding-top: 0;
+  }
+  .log-list-main {
+    grid-row: 1;
+  }
+  .log-list-arrow {
+    grid-row: 1;
+  }
+  .log-phase-item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .log-phase-text {
+    grid-column: 1;
   }
   .site-nav-inner,
   .wrap {

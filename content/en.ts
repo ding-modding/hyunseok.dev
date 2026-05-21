@@ -1,4 +1,5 @@
 import type { CVContent } from "./types";
+import { logPosts } from "./log";
 
 // English content. Sourced strictly from CONTENT.md — do not invent or alter.
 export const en: CVContent = {
@@ -6,6 +7,7 @@ export const en: CVContent = {
   nav: {
     home: "CV",
     projects: "Projects",
+    log: "Log",
   },
   hero: {
     kicker: "hyunseok.dev",
@@ -46,20 +48,22 @@ export const en: CVContent = {
       note: "Built and operate Timeschool, a night-study management web platform. Signed a service contract with Incheon Jinsan Science High School; running 3 years. Led the Node.js backend and contributed the React/Vite frontend; iterated each semester on user feedback.",
     },
   ],
+  log: logPosts,
   projects: [
     {
       id: "teamplo",
       name: "Teamplo",
       status: "BETA",
       statusNote: "FOUNDER",
-      summary: "Turns a group-chat meeting into a personal to-do list.",
+      summary: "A leader-run team dashboard for university group projects.",
       url: "https://teamplo.com",
-      tech: ["Next.js", "Vercel", "Postgres"],
+      tech: ["Next.js", "Postgres", "Yjs", "CodeMirror 6"],
+      logHref: "/log/teamplo-5-weeks",
       detail: {
         problem:
-          "Task assignments for a university team project scatter across a KakaoTalk group chat. To know who owns what, you have to scroll back through messages, and no one can see their own slice at a glance.",
+          "Task assignments for a university team project scatter across a KakaoTalk group chat. Knowing who owns what means scrolling back through messages — and the leader, especially, cannot see the team's bottleneck at a glance.",
         built:
-          "Turns a group-chat meeting into a personal to-do list. Captures the task assignments that flow through a Korean university team's KakaoTalk chat and surfaces each person's slice as a private dashboard. Built as a Kakao bot plus web app.",
+          "It started as a personal to-do app, but after P0 interviews with students at KAIST, SKKU, Korea University, and POSTECH it pivoted to a leader-first tool for unblocking the team. Built v0→v3→v4 in 5 weeks — replaced a hand-rolled merge with Yjs CRDT and migrated the editor to CodeMirror 6. Built throughout with Claude Code.",
       },
     },
     {
@@ -177,5 +181,9 @@ export const en: CVContent = {
       "Each project, expanded — the problem, what was built, the tech, and links.",
     langToggleLabel: "Toggle language",
     themeToggleLabel: "Toggle theme",
+    logTitle: "Dev Log",
+    logIntro: "Dated notes from building products.",
+    backLog: "Log",
+    devLog: "Dev log",
   },
 };

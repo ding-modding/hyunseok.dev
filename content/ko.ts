@@ -1,4 +1,5 @@
 import type { CVContent } from "./types";
+import { logPosts } from "./log";
 
 // Korean content. Sourced strictly from CONTENT.md — do not invent or alter.
 export const ko: CVContent = {
@@ -6,6 +7,7 @@ export const ko: CVContent = {
   nav: {
     home: "CV",
     projects: "프로젝트",
+    log: "일지",
   },
   hero: {
     kicker: "hyunseok.dev",
@@ -46,20 +48,22 @@ export const ko: CVContent = {
       note: "야간자율학습 관리 웹 플랫폼 Timeschool 개발·운영. 인천진산과학고와 서비스 계약 체결, 3년째 운영. Node.js 백엔드 리드, React/Vite 프론트엔드. 매 학기 사용자 피드백 기반 개선.",
     },
   ],
+  log: logPosts,
   projects: [
     {
       id: "teamplo",
       name: "Teamplo",
       status: "BETA",
       statusNote: "FOUNDER",
-      summary: "단톡방의 팀플 업무 분배를 개인 To-do 대시보드로.",
+      summary: "단톡방의 팀플 업무를 리더가 관리하는 팀 대시보드로.",
       url: "https://teamplo.com",
-      tech: ["Next.js", "Vercel", "Postgres"],
+      tech: ["Next.js", "Postgres", "Yjs", "CodeMirror 6"],
+      logHref: "/log/teamplo-5-weeks",
       detail: {
         problem:
-          "카카오톡 단톡방에서 팀플 업무가 흩어집니다. 누가 무엇을 맡았는지 메시지를 거슬러 올라가야 알 수 있고, 자기 몫을 한눈에 보기 어렵습니다.",
+          "팀플 업무는 카카오톡 단톡방에 흩어집니다. 회의가 끝나면 업무 분배가 메시지로 올라가지만, 누가 무엇을 맡았는지는 거슬러 올라가야 알 수 있고 — 무엇보다 리더가 팀의 병목을 한눈에 보기 어렵습니다.",
         built:
-          "단톡방의 업무 분배를 개인 To-do 대시보드로 정리합니다. 단톡방에 흩어지는 업무를 각자의 '오늘 할 일'로 모아 보여줍니다. 카카오 봇 + 웹으로 구현.",
+          "처음엔 개인 To-do 앱으로 시작했지만, KAIST·성균관·고려대·POSTECH 재학생 P0 인터뷰 후 '리더가 팀의 병목을 막는 도구'로 피벗했습니다. 5주에 v0→v3→v4를 빌드하며 자체 merge 로직을 Yjs CRDT로 교체하고 편집기를 CodeMirror 6로 마이그레이션했습니다. 개발 전 과정에 Claude Code를 활용했습니다.",
       },
     },
     {
@@ -167,5 +171,9 @@ export const ko: CVContent = {
       "각 프로젝트의 문제 정의, 만든 것, 기술 스택, 링크를 정리했습니다.",
     langToggleLabel: "언어 전환",
     themeToggleLabel: "테마 전환",
+    logTitle: "개발 일지",
+    logIntro: "제품을 만들며 남긴 날짜별 기록입니다.",
+    backLog: "일지",
+    devLog: "개발 일지",
   },
 };

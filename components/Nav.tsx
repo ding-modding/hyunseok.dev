@@ -38,6 +38,14 @@ export function Nav() {
           >
             {t.nav.projects}
           </Link>
+          <Link
+            href="/log"
+            className="site-nav-link"
+            aria-current={pathname.startsWith("/log") ? "page" : undefined}
+            data-active={pathname.startsWith("/log")}
+          >
+            {t.nav.log}
+          </Link>
           <span className="site-nav-sep" aria-hidden="true" />
           <LanguageToggle />
           <ThemeToggle />

@@ -9,6 +9,8 @@ export interface NavContent {
   home: string;
   /** Label for the /projects route. */
   projects: string;
+  /** Label for the /log route. */
+  log: string;
 }
 
 export interface HeroLink {
@@ -58,6 +60,8 @@ export interface ProjectEntry {
   url: string;
   /** Tech stack chips. */
   tech: string[];
+  /** Optional link to a dev-log post under /log. */
+  logHref?: string;
   /** Expanded detail for the /projects subpage. */
   detail: {
     problem: string;
@@ -113,6 +117,47 @@ export interface Contact {
   resumeHref: string;
 }
 
+/** One dated bullet within a log post phase. */
+export interface LogBullet {
+  /** Optional mono date prefix, e.g. "4/13". Omit for undated bullets. */
+  date?: string;
+  /** Bullet text. */
+  text: string;
+}
+
+/** One phase (dated section) of a log post. */
+export interface LogPhase {
+  /** Bold phase heading. */
+  heading: string;
+  /** Short intro line under the heading. */
+  intro: string;
+  /** Dated bullet list. */
+  bullets: LogBullet[];
+}
+
+/**
+ * A dated dev-log post. The body is authored in Korean and renders as-is in
+ * both language modes — only the surrounding /log chrome is bilingual.
+ */
+export interface LogPost {
+  /** URL slug under /log. */
+  slug: string;
+  /** Post title. */
+  title: string;
+  /** ISO date (YYYY-MM-DD), used for sorting and display. */
+  date: string;
+  /** One-line summary shown on the /log list page. */
+  summary: string;
+  /** Meta line shown under the title on the post page. */
+  meta: string;
+  /** Ordered phase sections. */
+  phases: LogPhase[];
+  /** ASCII flow diagram rendered in a monospace block. */
+  diagram: string;
+  /** Plain closing paragraphs after the diagram. */
+  closing: string[];
+}
+
 export interface SectionLabels {
   about: string;
   experience: string;
@@ -143,6 +188,14 @@ export interface UIStrings {
   langToggleLabel: string;
   /** Accessible label for the theme toggle. */
   themeToggleLabel: string;
+  /** Heading at the top of the /log list page. */
+  logTitle: string;
+  /** Intro line at the top of the /log list page. */
+  logIntro: string;
+  /** Back-to-log-list link label on a /log post page. */
+  backLog: string;
+  /** Label for the dev-log link on a /projects entry. */
+  devLog: string;
 }
 
 export interface CVContent {
@@ -154,6 +207,11 @@ export interface CVContent {
   sectionLabels: SectionLabels;
   experience: ExperienceEntry[];
   projects: ProjectEntry[];
+  /**
+   * Dev-log posts, newest first. Bodies are Korean and shared across both
+   * languages — see content/log.ts.
+   */
+  log: LogPost[];
   skills: SkillGroup[];
   education: EducationEntry[];
   awards: AwardGroup[];

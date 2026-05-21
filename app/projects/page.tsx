@@ -69,6 +69,11 @@ export default function ProjectsPage() {
               >
                 {t.ui.visitLabel} ↗
               </a>
+              {p.logHref && (
+                <Link className="detail-link" href={p.logHref}>
+                  {t.ui.devLog} →
+                </Link>
+              )}
             </div>
           </section>
         );

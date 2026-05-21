@@ -1,0 +1,171 @@
+import type { CVContent } from "./types";
+
+// Korean content. Sourced strictly from CONTENT.md — do not invent or alter.
+export const ko: CVContent = {
+  locale: "ko",
+  nav: {
+    home: "CV",
+    projects: "프로젝트",
+  },
+  hero: {
+    kicker: "hyunseok.dev",
+    name: "Hyunseok Hong",
+    identity: "KAIST 전산학부 학부생. 실제 사용자가 쓰는 제품을 만듭니다.",
+    nowLine: "현재 — Teamplo·MatchA 개발 중",
+    location: "대전, 대한민국",
+    links: [
+      { label: "GitHub", href: "https://github.com/ding-modding", glyph: "external" },
+      { label: "contact@hyunseok.dev", href: "mailto:contact@hyunseok.dev", isEmail: true },
+      { label: "이력서 PDF", href: "/resume.pdf", glyph: "download" },
+    ],
+  },
+  about:
+    "KAIST 전산학부 재학 중입니다. 정보올림피아드 경시로 시작했지만, 지금 관심은 실제 사용자가 쓰는 제품을 만드는 데 있습니다. 고등학교 때 만든 Timeschool은 학교와 계약을 맺고 3년째 운영 중입니다. 이 경험에서 HCI에 관심이 생겨 KIXLAB 연구 인턴으로 이어졌습니다.",
+  sectionLabels: {
+    about: "소개",
+    experience: "경력 — 배포 로그",
+    projects: "프로젝트 — 운영 상태",
+    skills: "기술",
+    education: "학력",
+    awards: "수상 경력",
+    openSource: "오픈소스",
+    contact: "연락",
+  },
+  experience: [
+    {
+      period: "2025.12 — 2026.03",
+      role: "Research Intern",
+      org: "KIXLAB — KAIST Interaction Lab",
+      note: "빠른 영상 시청에 어려움을 겪는 사용자(경계선 지능 등)를 위한 영상 접근성 향상 연구. 영상 속도를 사용자에 맞춰 adaptive하게 편집하는 프로토타입을 직접 설계·구현하고, AI 영상 편집 모델을 실험·튜닝.",
+      footnote: "KAIST Interaction Lab (PI: Juho Kim) · 멘토 Seungju Kim",
+    },
+    {
+      period: "2024.08 — present",
+      role: "PM & Lead Developer",
+      org: "Mad on — Timeschool",
+      note: "야간자율학습 관리 웹 플랫폼 Timeschool 개발·운영. 인천진산과학고와 서비스 계약 체결, 3년째 운영. Node.js 백엔드 리드, React/Vite 프론트엔드. 매 학기 사용자 피드백 기반 개선.",
+    },
+  ],
+  projects: [
+    {
+      id: "teamplo",
+      name: "Teamplo",
+      status: "BETA",
+      statusNote: "FOUNDER",
+      summary: "단톡방의 팀플 업무 분배를 개인 To-do 대시보드로.",
+      url: "https://teamplo.com",
+      tech: ["Next.js", "Vercel", "Postgres"],
+      detail: {
+        problem:
+          "카카오톡 단톡방에서 팀플 업무가 흩어집니다. 누가 무엇을 맡았는지 메시지를 거슬러 올라가야 알 수 있고, 자기 몫을 한눈에 보기 어렵습니다.",
+        built:
+          "단톡방의 업무 분배를 개인 To-do 대시보드로 정리합니다. 단톡방에 흩어지는 업무를 각자의 '오늘 할 일'로 모아 보여줍니다. 카카오 봇 + 웹으로 구현.",
+      },
+    },
+    {
+      id: "timeschool",
+      name: "Timeschool",
+      status: "LIVE",
+      statusNote: "3년 운영",
+      summary: "야간자율학습 관리 플랫폼. 과학고와 계약해 3년째 운영. 창업·리드 개발.",
+      url: "https://jinsan.timeschool.kr",
+      tech: ["Node.js", "React", "Vite"],
+      detail: {
+        problem:
+          "야간자율학습 관리는 출결·좌석·이동 신청이 종이와 구두로 처리되어 학생과 교사 모두에게 번거로웠습니다.",
+        built:
+          "야간자율학습 관리 웹 플랫폼을 만들어 인천진산과학고와 서비스 계약을 맺고 3년째 운영 중입니다. 창업하고 리드 개발을 맡았습니다.",
+      },
+    },
+    {
+      id: "matcha",
+      name: "MatchA",
+      status: "IN DEV",
+      statusNote: "CORE DEV",
+      summary: "단체 일정 관리 — 그룹 캘린더 + 일정 조율. 핵심 개발자.",
+      url: "https://matchall.co.kr",
+      tech: ["React", "Next.js"],
+      detail: {
+        problem:
+          "여러 모임에 속하면 그룹마다 일정 조율 도구가 흩어집니다. 그룹·캘린더를 한곳에서 정리하고 약속을 잡을 방법이 필요했습니다.",
+        built:
+          "워크스페이스에서 그룹·캘린더를 폴더처럼 정리하고, 시간투표·When2Meet 방식으로 일정을 조율하는 단체 일정 관리 서비스. 핵심 개발자로 참여.",
+      },
+    },
+  ],
+  skills: [
+    {
+      label: "Languages",
+      items: ["C", "C++", "C#", "Python", "Java", "TypeScript", "JavaScript", "HTML/CSS"],
+    },
+    {
+      label: "Frameworks",
+      items: ["React", "Next.js", "Node.js", "Tailwind CSS", "PyTorch"],
+    },
+    {
+      label: "Workflow",
+      items: ["AI-assisted development (Claude Code, Codex)"],
+    },
+  ],
+  education: [
+    {
+      institution: "KAIST, School of Computing",
+      period: "2024.02 — present",
+      note: "GPA 3.96 / 4.3 (82학점) · Dean's List",
+    },
+    {
+      institution: "인천진산과학고등학교",
+      period: "2022.03 — 2024.02",
+      note: "조기졸업",
+    },
+  ],
+  awards: [
+    {
+      label: "Competitive Programming",
+      entries: [
+        { year: "2025", title: "NYPC Code Battle — 상위 4.87%" },
+        { year: "2023", title: "한국정보올림피아드(KOI) 은상 — 전국 12위 (고등부 40위)" },
+        { year: "2022", title: "한국정보올림피아드(KOI) 동상 (고등부 39위)" },
+      ],
+    },
+    {
+      label: "Honors & Scholarships",
+      entries: [
+        { year: "2024", title: "KAIST 총장상" },
+        { year: "2024", title: "KAIST Presidential Fellowship (KPF) — 장학" },
+        { year: "2023", title: "ICT 어워드 코리아 — 대상" },
+        { year: "2022", title: "창의적 문제해결(CPS) 페스티벌 — 대상" },
+        { year: "—", title: "인천과학전람회 — 수상 (전동킥보드 자세·안정성 딥러닝 연구)" },
+      ],
+    },
+  ],
+  openSource: [
+    {
+      name: "gbrain",
+      repoUrl: "https://github.com/garrytan/gbrain",
+      stars: "17.8k★",
+      contribution:
+        "OAuth public-client(PKCE / RFC 7591) 호환성 수정. v0.34.1.0에 머지.",
+      prUrl: "https://github.com/garrytan/gbrain/pull/996",
+      prLabel: "PR #996",
+    },
+  ],
+  contact: {
+    email: "contact@hyunseok.dev",
+    github: { label: "github.com/ding-modding", href: "https://github.com/ding-modding" },
+    resumeHref: "/resume.pdf",
+  },
+  footer: "© 2026 Hyunseok Hong · built with Next.js",
+  ui: {
+    allProjects: "프로젝트 전체 보기",
+    problemHeading: "문제",
+    builtHeading: "만든 것",
+    techHeading: "기술 스택",
+    visitLabel: "사이트 방문",
+    backHome: "CV로 돌아가기",
+    projectsIntro:
+      "각 프로젝트의 문제 정의, 만든 것, 기술 스택, 링크를 정리했습니다.",
+    langToggleLabel: "언어 전환",
+    themeToggleLabel: "테마 전환",
+  },
+};

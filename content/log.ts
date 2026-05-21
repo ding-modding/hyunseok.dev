@@ -17,7 +17,7 @@ export const logPosts: LogPost[] = [
     title: "팀플로 / Teamplo — 개발 일지",
     date: "2026-05-19",
     summary:
-      "개인 todo PWA에서 리더 중심 v3, 그리고 v4 캘린더까지 — 5주 개발 일지.",
+      "개인 todo PWA에서 팀 중심 v3, 그리고 v4 캘린더까지 — 5주 개발 일지.",
     meta: "기간: 2026-04-13 → 2026-05-19 · 약 5주",
     phases: [
       {
@@ -43,7 +43,7 @@ export const logPosts: LogPost[] = [
       {
         heading: "2기 — 전략적 피벗 (4/19~4/20)",
         intro:
-          'P0 인터뷰로 방향이 크게 바뀜. "개인 todo 앱" → "리더가 팀의 병목을 막는 도구"(member-first → leader-first).',
+          'P0 인터뷰로 방향이 크게 바뀜. "개인 todo 앱" → "팀의 병목을 드러내는 도구"(member-first → team-first).',
         bullets: [
           { text: "제품명 확정: 팀플로 / Teamplo, 도메인 확보" },
           { text: "경쟁 분석, 설계 문서 재편" },
@@ -109,9 +109,9 @@ export const logPosts: LogPost[] = [
       },
     ],
     diagram: `v0 PWA ──피벗──▶ 팀플로 v3 ──인프라 교체──▶ 도그푸드 ──▶ v4 캘린더
-개인 todo       리더 중심      Yjs + CM6       회고        팀원 가시성`,
+개인 todo       팀 중심        Yjs + CM6       회고        팀원 가시성`,
     closing: [
-      "현재: v4 캘린더 라이브. 다음은 규칙 기반 리더 알림 + 첫 유료 기능. 카카오 봇은 파트너십 심사 대기.",
+      "현재: v4 캘린더 라이브. 다음은 규칙 기반 알림 + 첫 유료 기능. 카카오 봇은 파트너십 심사 대기.",
       "5주 내내 Claude Code로 백엔드·프론트·OAuth·실시간을 병렬로 풀었다.",
     ],
   },

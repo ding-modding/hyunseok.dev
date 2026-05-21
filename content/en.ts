@@ -52,15 +52,16 @@ export const en: CVContent = {
       name: "Teamplo",
       status: "BETA",
       statusNote: "FOUNDER",
-      summary: "A leader-run team dashboard for university group projects.",
+      summary:
+        "A group-project tool where meeting notes, tasks, and calendar interlock seamlessly — the whole team and each person's own work at a glance.",
       url: "https://teamplo.com",
       tech: ["Next.js", "PostgreSQL", "Yjs", "CodeMirror 6"],
       logHref: "/log/teamplo-5-weeks",
       detail: {
         problem:
-          "Task assignments for a university team project scatter across a KakaoTalk group chat. Knowing who owns what means scrolling back through messages — and the leader, especially, cannot see the team's bottleneck at a glance.",
+          "Task assignments for a university team project scatter across a KakaoTalk group chat. Knowing who owns what means scrolling back through messages, and the team's bottleneck never shows at a glance.",
         built:
-          "It started as a personal to-do app, but after P0 interviews with students at KAIST, SKKU, Korea University, and POSTECH it pivoted to a leader-first tool for unblocking the team. Built v0→v3→v4 in 5 weeks — replaced a hand-rolled merge with Yjs CRDT and migrated the editor to CodeMirror 6. Built throughout with Claude Code.",
+          "It started as a personal to-do app, but after P0 interviews with students at KAIST, SKKU, Korea University, and POSTECH it pivoted into a collaboration tool that makes a team's progress visible at a glance. Built v0→v3→v4 in 5 weeks — replaced a hand-rolled merge with Yjs CRDT and migrated the editor to CodeMirror 6. Built throughout with Claude Code.",
       },
     },
     {

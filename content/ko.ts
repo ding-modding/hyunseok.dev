@@ -52,15 +52,16 @@ export const ko: CVContent = {
       name: "Teamplo",
       status: "BETA",
       statusNote: "FOUNDER",
-      summary: "단톡방의 팀플 업무를 리더가 관리하는 팀 대시보드로.",
+      summary:
+        "회의록·할 일·캘린더가 막힘없이 맞물리는 팀플 협업 도구. 팀 전체도, 각자 할 일도 한눈에.",
       url: "https://teamplo.com",
       tech: ["Next.js", "PostgreSQL", "Yjs", "CodeMirror 6"],
       logHref: "/log/teamplo-5-weeks",
       detail: {
         problem:
-          "팀플 업무는 카카오톡 단톡방에 흩어짐. 회의가 끝나면 업무 분배가 메시지로 올라가지만, 누가 무엇을 맡았는지는 거슬러 올라가야 알 수 있음. 무엇보다 리더가 팀의 병목을 한눈에 보기 어려움.",
+          "팀플 업무는 카카오톡 단톡방에 흩어짐. 회의가 끝나면 업무 분배가 메시지로 올라가지만, 누가 무엇을 맡았는지는 거슬러 올라가야 알 수 있음. 무엇보다 팀의 병목이 한눈에 보이지 않음.",
         built:
-          "처음엔 개인 To-do 앱. KAIST·성균관·고려대·POSTECH 재학생 P0 인터뷰 후 '리더가 팀의 병목을 막는 도구'로 피벗. 5주에 v0→v3→v4를 빌드하며 자체 merge 로직을 Yjs CRDT로 교체하고 편집기를 CodeMirror 6로 마이그레이션. 개발 전 과정에 Claude Code 활용.",
+          "처음엔 개인 To-do 앱. KAIST·성균관·고려대·POSTECH 재학생 P0 인터뷰 후 팀의 진행이 한눈에 보이는 협업 도구로 피벗. 5주에 v0→v3→v4를 빌드하며 자체 merge 로직을 Yjs CRDT로 교체하고 편집기를 CodeMirror 6로 마이그레이션. 개발 전 과정에 Claude Code 활용.",
       },
     },
     {

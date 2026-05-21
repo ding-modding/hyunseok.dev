@@ -161,7 +161,7 @@ export default function HomePage() {
           <p className="contact-line">
             <span className="label">Résumé</span>
             <a className="contact-link" href={t.contact.resumeHref}>
-              resume.pdf ↓
+              {t.contact.resumeHref.replace(/^\//, "")} ↓
             </a>
           </p>
         </div>

@@ -16,7 +16,7 @@ export const ko: CVContent = {
     links: [
       { label: "GitHub", href: "https://github.com/ding-modding", glyph: "external" },
       { label: "contact@hyunseok.dev", href: "mailto:contact@hyunseok.dev", isEmail: true },
-      { label: "이력서 PDF", href: "/resume.pdf", glyph: "download" },
+      { label: "이력서 PDF", href: "/resume-ko.pdf", glyph: "download" },
     ],
   },
   about:
@@ -153,7 +153,7 @@ export const ko: CVContent = {
   contact: {
     email: "contact@hyunseok.dev",
     github: { label: "github.com/ding-modding", href: "https://github.com/ding-modding" },
-    resumeHref: "/resume.pdf",
+    resumeHref: "/resume-ko.pdf",
   },
   footer: "© 2026 Hyunseok Hong · built with Next.js",
   ui: {

@@ -10,7 +10,7 @@ export const en: CVContent = {
   hero: {
     kicker: "hyunseok.dev",
     name: "Hyunseok Hong",
-    identity: "KAIST CS undergraduate. I build products that real people use.",
+    identity: "KAIST CS undergraduate. I build products people actually use.",
     nowLine: "Now — building Teamplo & MatchA",
     location: "Daejeon, South Korea",
     links: [
@@ -81,11 +81,11 @@ export const en: CVContent = {
     {
       id: "matcha",
       name: "MatchA",
-      status: "IN DEV",
+      status: "BETA",
       statusNote: "CORE DEV",
       summary: "Group calendar and scheduling coordination. Core developer.",
       url: "https://matchall.co.kr",
-      tech: ["React", "Next.js"],
+      tech: ["Next.js", "Vercel"],
       detail: {
         problem:
           "Belonging to several groups means scheduling tools fragment across each one. You need a single place to organize groups and calendars and to lock in plans together.",
@@ -112,7 +112,7 @@ export const en: CVContent = {
     {
       institution: "KAIST, School of Computing",
       period: "2024.02 — present",
-      note: "GPA 3.96 / 4.3 (82 credits) · Dean's List",
+      note: "GPA 3.96 / 4.3 (82 credits) · Dean's List (1st & 2nd semester)",
     },
     {
       institution: "Incheon Jinsan Science High School",
@@ -127,11 +127,11 @@ export const en: CVContent = {
         { year: "2025", title: "NYPC Code Battle — top 4.87%" },
         {
           year: "2023",
-          title: "Korean Olympiad in Informatics (KOI), Silver — national 12th (40th, high-school division)",
+          title: "Korean Olympiad in Informatics (KOI), Silver — 12th nationally (high-school division)",
         },
         {
           year: "2022",
-          title: "Korean Olympiad in Informatics (KOI), Bronze (39th, high-school division)",
+          title: "Korean Olympiad in Informatics (KOI), Bronze (high-school division)",
         },
       ],
     },
@@ -143,7 +143,7 @@ export const en: CVContent = {
         { year: "2023", title: "ICT Award Korea — Grand Prize" },
         { year: "2022", title: "CPS (Creative Problem Solving) Festival — Grand Prize" },
         {
-          year: "—",
+          year: "2023",
           title: "Incheon Science Exhibition — award (e-scooter posture/stability deep-learning study)",
         },
       ],

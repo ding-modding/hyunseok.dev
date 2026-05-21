@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 interface ContactEmailProps {
   /** Local part of the address, e.g. "contact". */
   user: string;
@@ -14,9 +10,9 @@ interface ContactEmailProps {
 }
 
 /**
- * Assembles an email address in JS so the raw `user@domain` string never
- * appears in the server-rendered HTML — defeats naive address scrapers.
- * Before hydration it shows an obfuscated placeholder.
+ * Renders the contact address. `contact@hyunseok.dev` is a dedicated mailbox
+ * (Cloudflare Email Routing, with spam filtering), so the address is shown
+ * plainly — no `[at]` obfuscation, no pre-hydration flash.
  */
 export function ContactEmail({
   user,
@@ -24,26 +20,7 @@ export function ContactEmail({
   className,
   asLink = true,
 }: ContactEmailProps) {
-  const [address, setAddress] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Intentional: assemble the address only on the client, after mount, so
-    // the raw string is absent from server-rendered HTML. This bridges a
-    // deliberate server/client difference — not a cascading-render bug.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setAddress(`${user}@${domain}`);
-  }, [user, domain]);
-
-  if (!address) {
-    // Pre-hydration placeholder — not a valid harvestable address.
-    return (
-      <span className={className}>
-        {user}
-        <span aria-hidden="true"> [at] </span>
-        {domain}
-      </span>
-    );
-  }
+  const address = `${user}@${domain}`;
 
   if (!asLink) {
     return <span className={className}>{address}</span>;

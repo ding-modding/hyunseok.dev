@@ -48,8 +48,8 @@ Created by /design-consultation on 2026-05-21.
 ## Signature Components
 - **Status row (Projects):** NOT a card grid. `dot · name · mono status label · description · arrow`, hairline divider between rows. Status taxonomy:
   - `LIVE` — green dot. Genuinely operating. Timeschool only.
-  - `BETA` — amber dot. Deployed and usable, pre-commercial. Teamplo.
-  - `IN DEV` — neutral dot. Demo stage. MatchA.
+  - `BETA` — amber dot. Deployed and usable, pre-commercial. Teamplo, MatchA.
+  - `IN DEV` — neutral dot. Demo stage. Defined in the type; currently unused.
 - **Deploy log (Experience + Awards):** mono timestamp in a left gutter, content on the right, hairline dividers.
   - Awards uses two labeled sub-groups, each rendered in log style: **Competitive Programming** and **Honors & Scholarships**.
 - **Language toggle + theme toggle:** mono, minimal, in a quiet top bar.

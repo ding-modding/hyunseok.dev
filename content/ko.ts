@@ -80,11 +80,11 @@ export const ko: CVContent = {
     {
       id: "matcha",
       name: "MatchA",
-      status: "IN DEV",
+      status: "BETA",
       statusNote: "CORE DEV",
       summary: "단체 일정 관리 — 그룹 캘린더 + 일정 조율. 핵심 개발자.",
       url: "https://matchall.co.kr",
-      tech: ["React", "Next.js"],
+      tech: ["Next.js", "Vercel"],
       detail: {
         problem:
           "여러 모임에 속하면 그룹마다 일정 조율 도구가 흩어집니다. 그룹·캘린더를 한곳에서 정리하고 약속을 잡을 방법이 필요했습니다.",
@@ -111,7 +111,7 @@ export const ko: CVContent = {
     {
       institution: "KAIST, School of Computing",
       period: "2024.02 — present",
-      note: "GPA 3.96 / 4.3 (82학점) · Dean's List",
+      note: "GPA 3.96 / 4.3 (82학점) · Dean's List (1·2학기)",
     },
     {
       institution: "인천진산과학고등학교",
@@ -124,8 +124,8 @@ export const ko: CVContent = {
       label: "Competitive Programming",
       entries: [
         { year: "2025", title: "NYPC Code Battle — 상위 4.87%" },
-        { year: "2023", title: "한국정보올림피아드(KOI) 은상 — 전국 12위 (고등부 40위)" },
-        { year: "2022", title: "한국정보올림피아드(KOI) 동상 (고등부 39위)" },
+        { year: "2023", title: "한국정보올림피아드(KOI) 은상 — 전국 12위 (고등부)" },
+        { year: "2022", title: "한국정보올림피아드(KOI) 동상 (고등부)" },
       ],
     },
     {
@@ -135,7 +135,7 @@ export const ko: CVContent = {
         { year: "2024", title: "KAIST Presidential Fellowship (KPF) — 장학" },
         { year: "2023", title: "ICT 어워드 코리아 — 대상" },
         { year: "2022", title: "창의적 문제해결(CPS) 페스티벌 — 대상" },
-        { year: "—", title: "인천과학전람회 — 수상 (전동킥보드 자세·안정성 딥러닝 연구)" },
+        { year: "2023", title: "인천과학전람회 — 수상 (전동킥보드 자세·안정성 딥러닝 연구)" },
       ],
     },
   ],

@@ -8,7 +8,7 @@ import { StatusRow } from "@/components/StatusRow";
 import { LogEntry } from "@/components/LogEntry";
 import { ContactEmail } from "@/components/ContactEmail";
 
-/** Main CV page: Hero, About, Projects, Experience, Skills, Education,
+/** Main CV page: Hero, Projects, Experience, Skills, Education,
  *  Honors & Awards, Open Source. Contact lives in the shared Footer. */
 export default function HomePage() {
   const { t } = useLanguage();
@@ -16,11 +16,6 @@ export default function HomePage() {
   return (
     <div className="wrap fade-in">
       <Hero />
-
-      {/* About */}
-      <Section label={t.sectionLabels.about} id="about">
-        <p className="prose">{t.about}</p>
-      </Section>
 
       {/* Projects — status rows */}
       <Section label={t.sectionLabels.projects} id="projects">

@@ -21,10 +21,7 @@ export const en: CVContent = {
       { label: "Résumé PDF", href: "/resume.pdf", glyph: "download" },
     ],
   },
-  about:
-    "I am a Computer Science undergraduate at KAIST. I came up through competitive programming, but what I care about now is building products people actually use. Timeschool, which I built in high school, has run under a school contract for three years. That experience pulled me toward HCI and led to a research internship at KIXLAB.",
   sectionLabels: {
-    about: "About",
     experience: "Experience — deploy log",
     projects: "Projects — live status",
     skills: "Skills",

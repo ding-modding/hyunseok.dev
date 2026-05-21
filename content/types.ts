@@ -159,7 +159,6 @@ export interface LogPost {
 }
 
 export interface SectionLabels {
-  about: string;
   experience: string;
   projects: string;
   skills: string;
@@ -203,7 +202,6 @@ export interface CVContent {
   locale: "ko" | "en";
   nav: NavContent;
   hero: Hero;
-  about: string;
   sectionLabels: SectionLabels;
   experience: ExperienceEntry[];
   projects: ProjectEntry[];

@@ -315,12 +315,6 @@ button:focus-visible {
   margin-bottom: 22px;
 }
 
-.prose {
-  font-size: 16.5px;
-  color: var(--text);
-  max-width: 34em;
-}
-
 /* === Project status rows === */
 .status-row {
   display: grid;

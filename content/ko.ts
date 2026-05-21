@@ -12,7 +12,7 @@ export const ko: CVContent = {
   hero: {
     kicker: "hyunseok.dev",
     name: "Hyunseok Hong",
-    identity: "KAIST 전산학부 학부생. 실제 사용자가 쓰는 제품을 만듭니다.",
+    identity: "KAIST 전산학부 학부생. 실제 사용자가 쓰는 제품을 만든다.",
     nowLine: "현재 — Teamplo·MatchA 개발 중",
     location: "대전, 대한민국",
     links: [
@@ -21,10 +21,7 @@ export const ko: CVContent = {
       { label: "이력서 PDF", href: "/resume-ko.pdf", glyph: "download" },
     ],
   },
-  about:
-    "KAIST 전산학부 재학 중입니다. 정보올림피아드 경시로 시작했지만, 지금 관심은 실제 사용자가 쓰는 제품을 만드는 데 있습니다. 고등학교 때 만든 Timeschool은 학교와 계약을 맺고 3년째 운영 중입니다. 이 경험에서 HCI에 관심이 생겨 KIXLAB 연구 인턴으로 이어졌습니다.",
   sectionLabels: {
-    about: "소개",
     experience: "경력 — 배포 로그",
     projects: "프로젝트 — 운영 상태",
     skills: "기술",
@@ -61,9 +58,9 @@ export const ko: CVContent = {
       logHref: "/log/teamplo-5-weeks",
       detail: {
         problem:
-          "팀플 업무는 카카오톡 단톡방에 흩어집니다. 회의가 끝나면 업무 분배가 메시지로 올라가지만, 누가 무엇을 맡았는지는 거슬러 올라가야 알 수 있고 — 무엇보다 리더가 팀의 병목을 한눈에 보기 어렵습니다.",
+          "팀플 업무는 카카오톡 단톡방에 흩어진다. 회의가 끝나면 업무 분배가 메시지로 올라가지만, 누가 무엇을 맡았는지는 거슬러 올라가야 알 수 있다. 무엇보다 리더가 팀의 병목을 한눈에 보기 어렵다.",
         built:
-          "처음엔 개인 To-do 앱으로 시작했지만, KAIST·성균관·고려대·POSTECH 재학생 P0 인터뷰 후 '리더가 팀의 병목을 막는 도구'로 피벗했습니다. 5주에 v0→v3→v4를 빌드하며 자체 merge 로직을 Yjs CRDT로 교체하고 편집기를 CodeMirror 6로 마이그레이션했습니다. 개발 전 과정에 Claude Code를 활용했습니다.",
+          "처음엔 개인 To-do 앱. KAIST·성균관·고려대·POSTECH 재학생 P0 인터뷰 후 '리더가 팀의 병목을 막는 도구'로 피벗. 5주에 v0→v3→v4를 빌드하며 자체 merge 로직을 Yjs CRDT로 교체하고 편집기를 CodeMirror 6로 마이그레이션. 개발 전 과정에 Claude Code 활용.",
       },
     },
     {
@@ -76,9 +73,9 @@ export const ko: CVContent = {
       tech: ["Node.js", "React", "Vite"],
       detail: {
         problem:
-          "야간자율학습 관리는 출결·좌석·이동 신청이 종이와 구두로 처리되어 학생과 교사 모두에게 번거로웠습니다.",
+          "야간자율학습 관리는 출결·좌석·이동 신청이 종이와 구두로 처리되어 학생과 교사 모두에게 번거롭다.",
         built:
-          "야간자율학습 관리 웹 플랫폼을 만들어 인천진산과학고와 서비스 계약을 맺고 3년째 운영 중입니다. 창업하고 리드 개발을 맡았습니다.",
+          "야간자율학습 관리 웹 플랫폼을 만들어 인천진산과학고와 서비스 계약 체결, 3년째 운영 중. 창업하고 리드 개발 담당.",
       },
     },
     {
@@ -91,7 +88,7 @@ export const ko: CVContent = {
       tech: ["Next.js", "Vercel"],
       detail: {
         problem:
-          "여러 모임에 속하면 그룹마다 일정 조율 도구가 흩어집니다. 그룹·캘린더를 한곳에서 정리하고 약속을 잡을 방법이 필요했습니다.",
+          "여러 모임에 속하면 그룹마다 일정 조율 도구가 흩어진다. 그룹·캘린더를 한곳에서 정리하고 약속을 잡을 방법이 필요하다.",
         built:
           "워크스페이스에서 그룹·캘린더를 폴더처럼 정리하고, 시간투표·When2Meet 방식으로 일정을 조율하는 단체 일정 관리 서비스. 핵심 개발자로 참여.",
       },
@@ -168,11 +165,11 @@ export const ko: CVContent = {
     visitLabel: "사이트 방문",
     backHome: "CV로 돌아가기",
     projectsIntro:
-      "각 프로젝트의 문제 정의, 만든 것, 기술 스택, 링크를 정리했습니다.",
+      "프로젝트별 문제 정의 · 만든 것 · 기술 스택 · 링크.",
     langToggleLabel: "언어 전환",
     themeToggleLabel: "테마 전환",
     logTitle: "개발 일지",
-    logIntro: "제품을 만들며 남긴 날짜별 기록입니다.",
+    logIntro: "제품을 만들며 남긴 날짜별 기록.",
     backLog: "일지",
     devLog: "개발 일지",
   },

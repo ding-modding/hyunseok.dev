@@ -201,6 +201,10 @@ export const logPosts: LogPost[] = [
             date: "5/23",
             text: "v0.2.0 — Google Calendar OAuth 보안 재작성, refresh token AES-256-GCM 암호화",
           },
+          {
+            date: "5/23",
+            text: "릴리스 직후 정리 — 게스트 조율 뷰에서 비공개 설정인데도 중간 결과가 보이던 버그 수정, 비로그인 게스트 데이터 pg_cron 일일 정리 잡, ESLint 잔여 위반 일괄 정리",
+          },
         ],
       },
     ],

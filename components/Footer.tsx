@@ -10,43 +10,45 @@ export function Footer() {
 
   return (
     <footer className="site-footer">
-      <div className="site-footer-line">
-        {sectionLabels.contact} —{" "}
-        <ContactEmail
-          user="contact"
-          domain="hyunseok.dev"
-          className="site-footer-link"
-        />
+      <div className="wrap">
+        <div className="site-footer-line">
+          {sectionLabels.contact} —{" "}
+          <ContactEmail
+            user="contact"
+            domain="hyunseok.dev"
+            className="site-footer-link"
+          />
+        </div>
+        <div className="site-footer-line">
+          <a
+            className="site-footer-link"
+            href={contact.github.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          {contact.linkedin && (
+            <>
+              {" · "}
+              <a
+                className="site-footer-link"
+                href={contact.linkedin.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </>
+          )}
+          {" · "}
+          <a className="site-footer-link" href={contact.resumeHref}>
+            {t.hero.links.find((l) => l.glyph === "download")?.label ??
+              "Résumé PDF"}
+          </a>
+        </div>
+        <div className="site-footer-copy">{footer}</div>
       </div>
-      <div className="site-footer-line">
-        <a
-          className="site-footer-link"
-          href={contact.github.href}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-        {contact.linkedin && (
-          <>
-            {" · "}
-            <a
-              className="site-footer-link"
-              href={contact.linkedin.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </>
-        )}
-        {" · "}
-        <a className="site-footer-link" href={contact.resumeHref}>
-          {t.hero.links.find((l) => l.glyph === "download")?.label ??
-            "Résumé PDF"}
-        </a>
-      </div>
-      <div className="site-footer-copy">{footer}</div>
     </footer>
   );
 }

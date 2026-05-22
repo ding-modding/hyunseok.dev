@@ -87,6 +87,7 @@ export const ko: CVContent = {
       summary: "단체 일정 관리 — 그룹 캘린더 + 일정 조율. 핵심 개발자.",
       url: "https://matchall.co.kr",
       tech: ["Next.js", "Vercel"],
+      logHref: "/log/matcha-4-months",
       detail: {
         problem:
           "여러 모임에 속하면 그룹마다 일정 조율 도구가 흩어짐. 그룹·캘린더를 한곳에서 정리하고 약속을 잡을 방법이 필요함.",

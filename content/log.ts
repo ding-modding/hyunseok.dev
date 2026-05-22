@@ -15,10 +15,10 @@ export const logPosts: LogPost[] = [
   {
     slug: "teamplo-5-weeks",
     title: "팀플로 / Teamplo — 개발 일지",
-    date: "2026-05-19",
+    date: "2026-05-23",
     summary:
-      "개인 todo PWA에서 팀 중심 v3, 그리고 v4 캘린더까지 — 5주 개발 일지.",
-    meta: "기간: 2026-04-13 → 2026-05-19 · 약 5주",
+      "개인 todo PWA에서 팀 중심 v3, 그리고 v4 캘린더까지 — 6주 개발 일지.",
+    meta: "기간: 2026-04-13 → 2026-05-23 · 약 6주",
     phases: [
       {
         heading: "1기 — v0 PWA (4/13~4/17)",
@@ -92,7 +92,7 @@ export const logPosts: LogPost[] = [
         ],
       },
       {
-        heading: "5기 — 도그푸드 & v4 (5/11~5/19)",
+        heading: "5기 — 도그푸드 & v4 (5/11~5/23)",
         intro: "",
         bullets: [
           {
@@ -105,6 +105,14 @@ export const logPosts: LogPost[] = [
             date: "5/19",
             text: "에디터 폰트 합자 비활성화 (`->` `=>`에서 커서 어긋남 수정)",
           },
+          {
+            date: "5/22",
+            text: "네비게이션 지연 버그 수정 — router.refresh()가 도는 동안 화면 이동이 멈추던 문제. 휘발성 데이터를 GET 라우트 핸들러로 옮겨 해결",
+          },
+          {
+            date: "5/23",
+            text: "뒤로가기 시 이전 페이지 내용이 잠깐 보이던 문제 수정",
+          },
         ],
       },
     ],
@@ -112,7 +120,95 @@ export const logPosts: LogPost[] = [
 개인 todo       팀 중심        Yjs + CM6       회고        팀원 가시성`,
     closing: [
       "현재: v4 캘린더 라이브. 다음은 규칙 기반 알림 + 첫 유료 기능. 카카오 봇은 파트너십 심사 대기.",
-      "5주 내내 Claude Code로 백엔드·프론트·OAuth·실시간을 병렬로 풀었다.",
+      "6주 내내 Claude Code로 백엔드·프론트·OAuth·실시간을 병렬로 풀었다.",
+    ],
+  },
+  {
+    slug: "matcha-4-months",
+    title: "MatchA — 개발 일지",
+    date: "2026-05-23",
+    summary:
+      "워크스페이스 기반 협업 캘린더. 자체 VM에서 Vercel + Supabase 서버리스로 — 4개월 개발 일지.",
+    meta: "기간: 2026-01-19 → 2026-05-23 · 약 4개월",
+    phases: [
+      {
+        heading: "1기 — 기반 재시작 (1/19~1/30)",
+        intro:
+          'Feature-Sliced Design 아키텍처로 클린 슬레이트 재시작("rezero").',
+        bullets: [
+          { date: "1/19", text: "프로젝트 시작" },
+          {
+            date: "1/26~27",
+            text: "FSD 레이어 구조 도입, 클린 슬레이트 재작성",
+          },
+          {
+            date: "1/30",
+            text: "tRPC·Drizzle·인증·DB 스키마 셋업, 로그인/회원가입",
+          },
+        ],
+      },
+      {
+        heading: "2기 — 워크스페이스 & 캘린더 골격 (2월)",
+        intro: "계층형 워크스페이스와 캘린더 트리를 세운 구간.",
+        bullets: [
+          {
+            date: "2/5~9",
+            text: "DB 스키마, 캘린더·일정(promise), 소켓 기반 실시간",
+          },
+          { date: "2/15~16", text: "드래그로 일정 생성, 반복 일정(RRULE)" },
+          {
+            date: "2/19~23",
+            text: "FSD 리팩터, 워크스페이스 사이드바, 그룹·멤버 권한, 초대. 폴더/캘린더 재귀 트리 + 상위 폴더 일정의 하위 전파",
+          },
+        ],
+      },
+      {
+        heading: "3기 — 일정 조율 & 외부 연동 (3월~4월 초)",
+        intro: "",
+        bullets: [
+          { date: "3월", text: "권한·캐싱, UI/UX 개선" },
+          {
+            date: "4/7~8",
+            text: "When2Meet·시간투표 일정 조율, 게스트 모드(비로그인 참여), Google 캘린더 연동, 모바일/태블릿 인터랙션",
+          },
+          { date: "4/9", text: "동일 계정 다중 WebSocket 연결 충돌 수정" },
+        ],
+      },
+      {
+        heading: "4기 — 자체 배포 (4월 초)",
+        intro: "",
+        bullets: [
+          {
+            date: "4/5~6",
+            text: "Rocky Linux 배포 스크립트, standalone 빌드. 가비아 VM에 Docker PostgreSQL + 자체 WebSocket 서버 + Better Auth로 운영",
+          },
+        ],
+      },
+      {
+        heading: "5기 — Vercel + Supabase 마이그레이션 (5/21~5/23)",
+        intro:
+          "상주 프로세스에 의존하던 자체 VM 구성을 서버리스로 옮기며 실시간·인증 계층을 통째로 재작성.",
+        bullets: [
+          {
+            date: "5/21",
+            text: "ESLint flat config 전환, DB를 Supabase 풀러로, 자체 WS 서버 삭제 → Supabase Realtime Broadcast, 백그라운드 작업을 Next 16 after()로",
+          },
+          {
+            date: "5/22",
+            text: "Better Auth → Supabase Auth 전면 마이그레이션, Vercel 함수 서울 리전 고정, 게스트 제출 인증 강화, 프로덕션 배포",
+          },
+          {
+            date: "5/23",
+            text: "v0.2.0 — Google Calendar OAuth 보안 재작성, refresh token AES-256-GCM 암호화",
+          },
+        ],
+      },
+    ],
+    diagram: `워크스페이스 트리 ──▶ 일정 조율 ──▶ 외부 캘린더 ──인프라 이전──▶ Vercel + Supabase
+계층형 캘린더       When2Meet    Google 양방향    자체 VM → 서버리스`,
+    closing: [
+      "현재: Vercel + Supabase로 이전 완료, v0.2.0 배포. 베타 운영 중.",
+      "상주 WebSocket 서버와 배포 스크립트에 묶여 있던 구조를 서버리스로 걷어내며, 실시간과 인증을 관리형 서비스 위에 다시 올렸다.",
     ],
   },
 ];

@@ -88,6 +88,7 @@ export const en: CVContent = {
       summary: "Group calendar and scheduling coordination. Core developer.",
       url: "https://matchall.co.kr",
       tech: ["Next.js", "Vercel"],
+      logHref: "/log/matcha-4-months",
       detail: {
         problem:
           "Belonging to several groups means scheduling tools fragment across each one. You need a single place to organize groups and calendars and to lock in plans together.",

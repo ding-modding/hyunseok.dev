@@ -15,10 +15,10 @@ export const logPosts: LogPost[] = [
   {
     slug: "teamplo-5-weeks",
     title: "팀플로 / Teamplo — 개발 일지",
-    date: "2026-05-23",
+    date: "2026-05-24",
     summary:
       "개인 todo PWA에서 팀 중심 v3, 그리고 v4 캘린더까지 — 6주 개발 일지.",
-    meta: "기간: 2026-04-13 → 2026-05-23 · 약 6주",
+    meta: "기간: 2026-04-13 → 2026-05-24 · 약 6주",
     phases: [
       {
         heading: "1기 — v0 PWA (4/13~4/17)",
@@ -92,7 +92,7 @@ export const logPosts: LogPost[] = [
         ],
       },
       {
-        heading: "5기 — 도그푸드 & v4 (5/11~5/23)",
+        heading: "5기 — 도그푸드 & v4 (5/11~5/24)",
         intro: "",
         bullets: [
           {
@@ -113,23 +113,35 @@ export const logPosts: LogPost[] = [
             date: "5/23",
             text: "뒤로가기 시 이전 페이지 내용이 잠깐 보이던 문제 수정",
           },
+          {
+            date: "5/24",
+            text: "v4 캘린더 Phase 2 드래그 스케줄링 (PR #13). 호버 기기는 행 그립 → 날짜 셀 드롭, 터치는 롱프레스 → DatePickerSheet. 낙관 상태·800ms 슬로우 스피너·2초 TTL 에러 폴백·받침 인식 한국어 날짜 안내까지 단일 훅으로 통합. 단위·E2E 테스트 50건 추가",
+          },
+          {
+            date: "5/24",
+            text: "v3 캘린더를 클라이언트 셸 + GET API로 분리. router.refresh 폴백을 prop catch-up 효과로 교체해 낙관 상태가 refetch 정착까지 유지되도록 정리",
+          },
+          {
+            date: "5/24",
+            text: "구조 리팩터 — src/components 평면 33개를 기능별 8 폴더로, 거대 파일 5개를 헬퍼 모듈로 분할. biome 에러·경고 0건, v0 잔재 코드(parser·session·DashboardLive) 제거",
+          },
         ],
       },
     ],
     diagram: `v0 PWA ──피벗──▶ 팀플로 v3 ──인프라 교체──▶ 도그푸드 ──▶ v4 캘린더
 개인 todo       팀 중심        Yjs + CM6       회고        팀원 가시성`,
     closing: [
-      "현재: v4 캘린더 라이브. 다음은 규칙 기반 알림 + 첫 유료 기능. 카카오 봇은 파트너십 심사 대기.",
+      "현재: v4 캘린더 + 드래그 스케줄링 라이브. 다음은 규칙 기반 알림 + 첫 유료 기능. 카카오 봇은 파트너십 심사 대기.",
       "6주 내내 Claude Code로 백엔드·프론트·OAuth·실시간을 병렬로 풀었다.",
     ],
   },
   {
     slug: "matcha-4-months",
     title: "MatchA — 개발 일지",
-    date: "2026-05-23",
+    date: "2026-05-24",
     summary:
       "워크스페이스 기반 협업 캘린더. 자체 VM에서 Vercel + Supabase 서버리스로 — 4개월 개발 일지.",
-    meta: "기간: 2026-01-19 → 2026-05-23 · 약 4개월",
+    meta: "기간: 2026-01-19 → 2026-05-24 · 약 4개월",
     phases: [
       {
         heading: "1기 — 기반 재시작 (1/19~1/30)",
@@ -185,7 +197,7 @@ export const logPosts: LogPost[] = [
         ],
       },
       {
-        heading: "5기 — Vercel + Supabase 마이그레이션 (5/21~5/23)",
+        heading: "5기 — Vercel + Supabase 마이그레이션 (5/21~5/24)",
         intro:
           "상주 프로세스에 의존하던 자체 VM 구성을 서버리스로 옮기며 실시간·인증 계층을 통째로 재작성.",
         bullets: [
@@ -204,6 +216,10 @@ export const logPosts: LogPost[] = [
           {
             date: "5/23",
             text: "릴리스 직후 정리 — 게스트 조율 뷰에서 비공개 설정인데도 중간 결과가 보이던 버그 수정, 비로그인 게스트 데이터 pg_cron 일일 정리 잡, ESLint 잔여 위반 일괄 정리",
+          },
+          {
+            date: "5/24",
+            text: "Google OAuth 앱 검증 통과 — 1차 반려 사유였던 동의 화면 'MatchAll' vs 홈페이지 'MatchA' 표기 불일치를 'MatchA'로 통일해 재제출, 100명 상한 해제 + '확인되지 않은 앱' 경고 해소",
           },
         ],
       },

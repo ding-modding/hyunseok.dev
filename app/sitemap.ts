@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { logPosts } from "@/content/log";
+import { researchProjects } from "@/content/research";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://hyunseok.dev";
@@ -18,6 +19,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${base}/research`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    ...researchProjects.map((p) => ({
+      url: `${base}/research/${p.slug}`,
+      lastModified: new Date(p.date),
+      changeFrequency: "yearly" as const,
+      priority: 0.5,
+    })),
     ...logPosts.map((post) => ({
       url: `${base}/log/${post.slug}`,
       lastModified: new Date(post.date),

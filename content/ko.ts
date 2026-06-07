@@ -1,5 +1,6 @@
 import type { CVContent } from "./types";
 import { logPosts } from "./log";
+import { researchProjects } from "./research";
 
 // Korean content. Sourced strictly from CONTENT.md — do not invent or alter.
 export const ko: CVContent = {
@@ -7,6 +8,7 @@ export const ko: CVContent = {
   nav: {
     home: "CV",
     projects: "프로젝트",
+    research: "연구",
     log: "일지",
   },
   hero: {
@@ -24,6 +26,7 @@ export const ko: CVContent = {
   sectionLabels: {
     experience: "경력 — 배포 로그",
     projects: "프로젝트 — 운영 상태",
+    research: "연구 — 디지털 인문학",
     skills: "기술",
     education: "학력",
     awards: "수상 경력",
@@ -46,6 +49,7 @@ export const ko: CVContent = {
     },
   ],
   log: logPosts,
+  research: researchProjects,
   projects: [
     {
       id: "teamplo",
@@ -174,5 +178,12 @@ export const ko: CVContent = {
     logIntro: "제품을 만들며 남긴 날짜별 기록.",
     backLog: "일지",
     devLog: "개발 일지",
+    allResearch: "연구 전체 보기",
+    researchTitle: "연구",
+    researchIntro: "디지털 인문학 연구 — 발표 자료와 결과 분석.",
+    backResearch: "연구",
+    viewPresentation: "발표 자료",
+    viewSource: "소스 (GitHub)",
+    methodsHeading: "방법",
   },
 };

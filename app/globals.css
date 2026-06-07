@@ -850,6 +850,196 @@ button:focus-visible {
   max-width: 34em;
 }
 
+/* === /research detail === */
+.research-post {
+  padding-bottom: var(--sp-md);
+}
+.research-post-head {
+  padding: var(--sp-3xl) 0 var(--sp-lg);
+}
+.research-post-titlerow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 16px;
+}
+.research-post-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 5.5vw, 46px);
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+.research-post-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--faint);
+}
+.research-post-question {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 36em;
+  margin-bottom: var(--sp-lg);
+}
+.research-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: var(--sp-lg);
+}
+.research-methods-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.research-post-links {
+  margin-bottom: var(--sp-lg);
+}
+.research-post-meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--faint);
+  max-width: 40em;
+}
+
+/* === Markdown research report === */
+.report {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.report > * {
+  max-width: 38em;
+}
+.report h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 23px;
+  letter-spacing: -0.015em;
+  margin: var(--sp-2xl) 0 var(--sp-md);
+  padding-top: var(--sp-xl);
+  border-top: 1px solid var(--border);
+}
+.report h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  margin: var(--sp-xl) 0 var(--sp-sm);
+}
+.report p {
+  margin: 12px 0;
+}
+.report strong {
+  font-weight: 600;
+  color: var(--text);
+}
+.report em {
+  font-style: italic;
+  color: var(--muted);
+}
+.report a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.report a:hover {
+  border-bottom-color: var(--accent);
+}
+.report code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1px 5px;
+}
+.report ul,
+.report ol {
+  margin: 12px 0;
+  padding-left: 1.3em;
+}
+.report li {
+  margin: 6px 0;
+}
+.report li::marker {
+  color: var(--faint);
+}
+.report blockquote {
+  margin: var(--sp-md) 0;
+  padding: 2px 0 2px 18px;
+  border-left: 2px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+.report blockquote p {
+  margin: 4px 0;
+}
+.report hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--sp-xl) 0;
+}
+
+/* report tables — hairline, mono header, horizontally scrollable on mobile */
+.report-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: var(--sp-md) 0;
+}
+.report-table-wrap table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13.5px;
+}
+.report-table-wrap th,
+.report-table-wrap td {
+  text-align: left;
+  padding: 8px 14px 8px 0;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.report-table-wrap thead th {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--faint);
+  border-bottom-color: var(--muted);
+}
+.report-table-wrap tbody tr:last-child td {
+  border-bottom: none;
+}
+.report-table-wrap td strong {
+  font-weight: 600;
+}
+
+/* report figures — theme-paired, hairline-framed, captioned */
+.report-figure {
+  margin: var(--sp-lg) 0;
+}
+.report-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.report-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--faint);
+  margin-top: 8px;
+  text-align: center;
+}
+
 /* === Section entry motion (minimal-functional) === */
 .fade-in {
   animation: fade-in 0.35s ease-out both;

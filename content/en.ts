@@ -1,5 +1,6 @@
 import type { CVContent } from "./types";
 import { logPosts } from "./log";
+import { researchProjects } from "./research";
 
 // English content. Sourced strictly from CONTENT.md — do not invent or alter.
 export const en: CVContent = {
@@ -7,6 +8,7 @@ export const en: CVContent = {
   nav: {
     home: "CV",
     projects: "Projects",
+    research: "Research",
     log: "Log",
   },
   hero: {
@@ -24,6 +26,7 @@ export const en: CVContent = {
   sectionLabels: {
     experience: "Experience — deploy log",
     projects: "Projects — live status",
+    research: "Research — digital humanities",
     skills: "Skills",
     education: "Education",
     awards: "Honors & Awards",
@@ -46,6 +49,7 @@ export const en: CVContent = {
     },
   ],
   log: logPosts,
+  research: researchProjects,
   projects: [
     {
       id: "teamplo",
@@ -184,5 +188,12 @@ export const en: CVContent = {
     logIntro: "Dated notes from building products.",
     backLog: "Log",
     devLog: "Dev log",
+    allResearch: "View all research",
+    researchTitle: "Research",
+    researchIntro: "Digital-humanities research — presentation deck and results analysis.",
+    backResearch: "Research",
+    viewPresentation: "Presentation",
+    viewSource: "Source (GitHub)",
+    methodsHeading: "Methods",
   },
 };

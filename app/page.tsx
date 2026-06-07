@@ -11,7 +11,7 @@ import { ContactEmail } from "@/components/ContactEmail";
 /** Main CV page: Hero, Projects, Experience, Skills, Education,
  *  Honors & Awards, Open Source. Contact lives in the shared Footer. */
 export default function HomePage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <div className="wrap fade-in">
@@ -32,6 +32,36 @@ export default function HomePage() {
         <div className="sec-foot">
           <Link href="/projects" className="sec-foot-link">
             {t.ui.allProjects} →
+          </Link>
+        </div>
+      </Section>
+
+      {/* Research — status rows (neutral dot; not a shipped-product status) */}
+      <Section label={t.sectionLabels.research} id="research">
+        {t.research.map((r) => (
+          <Link
+            key={r.slug}
+            href={`/research/${r.slug}`}
+            className="status-row"
+          >
+            <span className="dot dot-dev" aria-hidden="true" />
+            <span className="status-row-main">
+              <span className="status-row-head">
+                <span className="status-row-name">{r.title[lang]}</span>
+                <span className="status-row-label status-dev">
+                  {r.label[lang]}
+                </span>
+              </span>
+              <span className="status-row-desc">{r.summary[lang]}</span>
+            </span>
+            <span className="status-row-arrow" aria-hidden="true">
+              →
+            </span>
+          </Link>
+        ))}
+        <div className="sec-foot">
+          <Link href="/research" className="sec-foot-link">
+            {t.ui.allResearch} →
           </Link>
         </div>
       </Section>

@@ -39,6 +39,14 @@ export function Nav() {
             {t.nav.projects}
           </Link>
           <Link
+            href="/research"
+            className="site-nav-link"
+            aria-current={pathname.startsWith("/research") ? "page" : undefined}
+            data-active={pathname.startsWith("/research")}
+          >
+            {t.nav.research}
+          </Link>
+          <Link
             href="/log"
             className="site-nav-link"
             aria-current={pathname.startsWith("/log") ? "page" : undefined}

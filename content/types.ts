@@ -9,6 +9,8 @@ export interface NavContent {
   home: string;
   /** Label for the /projects route. */
   projects: string;
+  /** Label for the /research route. */
+  research: string;
   /** Label for the /log route. */
   log: string;
 }
@@ -67,6 +69,37 @@ export interface ProjectEntry {
     problem: string;
     built: string;
   };
+}
+
+/**
+ * A research project. Unlike ProjectEntry (shipped products with a live
+ * status), research has a venue, a method list, a presentation deck, and a
+ * long-form report. The report body is Korean markdown rendered as-is; the
+ * surrounding chrome is bilingual.
+ */
+export interface ResearchProject {
+  /** URL slug under /research (shared across languages). */
+  slug: string;
+  /** Project title, e.g. "Reddit vs Moltbook" (usually language-neutral). */
+  title: LocalizedText;
+  /** ISO date (YYYY-MM-DD) for sorting and display (shared). */
+  date: string;
+  /** Short mono label shown beside the title, e.g. "Digital Humanities · 2026". */
+  label: LocalizedText;
+  /** One-line summary for the /research list and the CV section row. */
+  summary: LocalizedText;
+  /** The research question / framing, shown as the detail-page intro. */
+  question: LocalizedText;
+  /** Method/technique chips (language-neutral terms). */
+  methods: string[];
+  /** Path to the standalone presentation deck (static HTML under /public). */
+  deckHref: string;
+  /** Source repository URL. */
+  repoHref: string;
+  /** Meta line under the report title (data window, date). */
+  reportMeta: LocalizedText;
+  /** Markdown report body per language, rendered full on the detail page. */
+  report: LocalizedText;
 }
 
 export interface SkillGroup {
@@ -171,6 +204,7 @@ export interface LogPost {
 export interface SectionLabels {
   experience: string;
   projects: string;
+  research: string;
   skills: string;
   education: string;
   awards: string;
@@ -205,6 +239,20 @@ export interface UIStrings {
   backLog: string;
   /** Label for the dev-log link on a /projects entry. */
   devLog: string;
+  /** "View all research" link from the CV section to /research. */
+  allResearch: string;
+  /** Heading at the top of the /research list page. */
+  researchTitle: string;
+  /** Intro line at the top of the /research list page. */
+  researchIntro: string;
+  /** Back-to-research-list link label on a /research detail page. */
+  backResearch: string;
+  /** Label for the presentation-deck link. */
+  viewPresentation: string;
+  /** Label for the source-repository link. */
+  viewSource: string;
+  /** Heading for the methods/technique chips on a /research detail page. */
+  methodsHeading: string;
 }
 
 export interface CVContent {
@@ -215,6 +263,11 @@ export interface CVContent {
   sectionLabels: SectionLabels;
   experience: ExperienceEntry[];
   projects: ProjectEntry[];
+  /**
+   * Research projects, newest first. A single shared array (content/research.ts);
+   * chrome is bilingual, the report body is Korean markdown.
+   */
+  research: ResearchProject[];
   /**
    * Dev-log posts, newest first. A single shared array (content/log.ts) whose
    * prose fields are bilingual and resolve to the active language at render.

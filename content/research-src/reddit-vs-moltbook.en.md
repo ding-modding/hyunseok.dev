@@ -194,6 +194,6 @@ The time dimension (§5) yields the sharpest difference: **AI agents post almost
 
 1. **Re-run §3 after the MBC-20 filter** — reconfirm first-person and vocabulary metrics on the discursive subset alone.
 2. **Clean Reddit** — exclude `[removed]`/`[deleted]` and title-only posts.
-3. **Include comments** — re-examine length and first-person patterns with comments added beyond posts.
+3. **Extend comments to the text metrics** — re-examine §3 length and first-person metrics with comment text folded in (comments are already reflected in the §4 structure and §6 author-activity analyses).
 4. **Re-collect matched threads** — pull the full comments of a specific set of posts to measure §4 depth/structure precisely.
 5. **§8 synthesis** — tie all dimensions together with a summary table + KS/Mann-Whitney tests + radar (finalize).

@@ -2,6 +2,7 @@
 
 import ReactMarkdown, { type ExtraProps } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkBreaks from "remark-breaks";
 import type { ComponentPropsWithoutRef } from "react";
 import { useTheme } from "@/components/ThemeProvider";
 
@@ -25,7 +26,10 @@ export function ResearchReport({ markdown }: { markdown: string }) {
         // singleTilde:false — the report uses single `~` for numeric ranges
         // ("2026-01-27~31", "0.05~0.15"); without this GFM reads them as
         // strikethrough delimiters and strikes through whole spans.
-        remarkPlugins={[[remarkGfm, { singleTilde: false }]]}
+        // remarkBreaks — render single newlines as hard <br> so authored line
+        // breaks (e.g. the multi-line data-note blockquote) are preserved
+        // instead of collapsing to spaces (CommonMark soft-break behavior).
+        remarkPlugins={[[remarkGfm, { singleTilde: false }], remarkBreaks]}
         components={{
           img: ({ src, alt }) => {
             const base = typeof src === "string" ? src : "";

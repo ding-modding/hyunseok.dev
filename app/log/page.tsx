@@ -7,7 +7,7 @@ import { formatLogDate } from "@/lib/logDate";
 /**
  * Dev-log list page: posts newest first, each as a hairline-divided log row
  * (mono date · title · one-line summary), in the deploy-log style of the CV.
- * Post bodies are Korean; only this list chrome is bilingual.
+ * Title and summary resolve to the active language.
  */
 export default function LogListPage() {
   const { t, lang } = useLanguage();
@@ -32,8 +32,8 @@ export default function LogListPage() {
               {formatLogDate(post.date, lang)}
             </time>
             <span className="log-list-main">
-              <span className="log-list-title">{post.title}</span>
-              <span className="log-list-summary">{post.summary}</span>
+              <span className="log-list-title">{post.title[lang]}</span>
+              <span className="log-list-summary">{post.summary[lang]}</span>
             </span>
             <span className="log-list-arrow" aria-hidden="true">
               →

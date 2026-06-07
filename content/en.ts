@@ -61,7 +61,7 @@ export const en: CVContent = {
         problem:
           "Task assignments for a university team project scatter across a KakaoTalk group chat. Knowing who owns what means scrolling back through messages, and the team's bottleneck never shows at a glance.",
         built:
-          "It started as a personal to-do app, but after P0 interviews with students at KAIST, SKKU, Korea University, and POSTECH it pivoted into a collaboration tool that makes a team's progress visible at a glance. Built v0→v3→v4 in 5 weeks — replaced a hand-rolled merge with Yjs CRDT and migrated the editor to CodeMirror 6. Built throughout with Claude Code.",
+          "It started as a personal to-do app, but after P0 interviews with students at KAIST, SKKU, Korea University, and POSTECH it pivoted into a collaboration tool that makes a team's progress visible at a glance. Built v0→v3→v4 in 7 weeks — replaced a hand-rolled merge with Yjs CRDT and migrated the editor to CodeMirror 6. Built throughout with Claude Code.",
       },
     },
     {

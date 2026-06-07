@@ -117,45 +117,55 @@ export interface Contact {
   resumeHref: string;
 }
 
+/** A string rendered in whichever site language is active. */
+export interface LocalizedText {
+  ko: string;
+  en: string;
+}
+
 /** One dated bullet within a log post phase. */
 export interface LogBullet {
-  /** Optional mono date prefix, e.g. "4/13". Omit for undated bullets. */
-  date?: string;
+  /**
+   * Optional mono date prefix in the gutter. Usually a language-neutral token
+   * like "4/13" (a plain string); use a LocalizedText only when the label
+   * itself differs by language (e.g. "3월" / "Mar").
+   */
+  date?: string | LocalizedText;
   /** Bullet text. */
-  text: string;
+  text: LocalizedText;
 }
 
 /** One phase (dated section) of a log post. */
 export interface LogPhase {
   /** Bold phase heading. */
-  heading: string;
-  /** Short intro line under the heading. */
-  intro: string;
+  heading: LocalizedText;
+  /** Short intro line under the heading (may be empty in both languages). */
+  intro: LocalizedText;
   /** Dated bullet list. */
   bullets: LogBullet[];
 }
 
 /**
- * A dated dev-log post. The body is authored in Korean and renders as-is in
- * both language modes — only the surrounding /log chrome is bilingual.
+ * A dated dev-log post. Prose fields are bilingual (LocalizedText) and render
+ * in the active site language; structural fields (slug, date) are shared.
  */
 export interface LogPost {
-  /** URL slug under /log. */
+  /** URL slug under /log (shared across languages). */
   slug: string;
   /** Post title. */
-  title: string;
-  /** ISO date (YYYY-MM-DD), used for sorting and display. */
+  title: LocalizedText;
+  /** ISO date (YYYY-MM-DD), used for sorting and display (shared). */
   date: string;
   /** One-line summary shown on the /log list page. */
-  summary: string;
+  summary: LocalizedText;
   /** Meta line shown under the title on the post page. */
-  meta: string;
+  meta: LocalizedText;
   /** Ordered phase sections. */
   phases: LogPhase[];
   /** ASCII flow diagram rendered in a monospace block. */
-  diagram: string;
+  diagram: LocalizedText;
   /** Plain closing paragraphs after the diagram. */
-  closing: string[];
+  closing: LocalizedText[];
 }
 
 export interface SectionLabels {
@@ -206,8 +216,8 @@ export interface CVContent {
   experience: ExperienceEntry[];
   projects: ProjectEntry[];
   /**
-   * Dev-log posts, newest first. Bodies are Korean and shared across both
-   * languages — see content/log.ts.
+   * Dev-log posts, newest first. A single shared array (content/log.ts) whose
+   * prose fields are bilingual and resolve to the active language at render.
    */
   log: LogPost[];
   skills: SkillGroup[];

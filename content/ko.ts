@@ -61,7 +61,7 @@ export const ko: CVContent = {
         problem:
           "팀플 업무는 카카오톡 단톡방에 흩어짐. 회의가 끝나면 업무 분배가 메시지로 올라가지만, 누가 무엇을 맡았는지는 거슬러 올라가야 알 수 있음. 무엇보다 팀의 병목이 한눈에 보이지 않음.",
         built:
-          "처음엔 개인 To-do 앱. KAIST·성균관·고려대·POSTECH 재학생 P0 인터뷰 후 팀의 진행이 한눈에 보이는 협업 도구로 피벗. 5주에 v0→v3→v4를 빌드하며 자체 merge 로직을 Yjs CRDT로 교체하고 편집기를 CodeMirror 6로 마이그레이션. 개발 전 과정에 Claude Code 활용.",
+          "처음엔 개인 To-do 앱. KAIST·성균관·고려대·POSTECH 재학생 P0 인터뷰 후 팀의 진행이 한눈에 보이는 협업 도구로 피벗. 7주에 v0→v3→v4를 빌드하며 자체 merge 로직을 Yjs CRDT로 교체하고 편집기를 CodeMirror 6로 마이그레이션. 개발 전 과정에 Claude Code 활용.",
       },
     },
     {

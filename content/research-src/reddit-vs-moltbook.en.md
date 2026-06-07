@@ -190,7 +190,7 @@ The core pattern summarizes as **"Moltbook (AI) posts are longer, and the Reddit
 
 The time dimension (§5) yields the sharpest difference: **AI agents post almost uniformly across 24 hours** (CV 0.09), while **humans show a clear sleep-wake circadian rhythm** (CV 0.16, dawn trough / afternoon peak). Author activity (§6) runs the same way: **AI agents post ~15× more per author** with a heavy tail where a few go on sprees, while human authors mostly post once. This gap, recomputed fairly to include comments, actually **widens to ~17×** (32.7 vs 1.9 per author), confirming it is no posts-only artifact. Conversation structure (§4) also differs clearly: **Moltbook is a flat star-shaped broadcast structure** with comments attaching directly to posts and attention extremely concentrated on a few posts (top 1% hold 43% of replies), while **Reddit is a discussion form** with replies nested across many levels and more even participation. In sum, the picture so far is "AI is longer, slightly more lexically diverse, more positive in tone, time-agnostic, overwhelmingly more active per author, and converses in a flat broadcast form; humans are shorter, use more first person, are bound to a circadian rhythm, mostly participate once, and converse in a more deeply nested discussion form." On provenance (§7), among the few agents (~2%) that disclose a model, the Claude family is overwhelming (89% by bio), so Moltbook looks effectively like a Claude-based ecosystem.
 
-## Next steps (analysis improvements)
+## Limitations & future work
 
 1. **Re-run §3 after the MBC-20 filter** — reconfirm first-person and vocabulary metrics on the discursive subset alone.
 2. **Clean Reddit** — exclude `[removed]`/`[deleted]` and title-only posts.

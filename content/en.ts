@@ -26,7 +26,7 @@ export const en: CVContent = {
   sectionLabels: {
     experience: "Experience — deploy log",
     projects: "Projects — live status",
-    research: "Research — digital humanities",
+    research: "Research — talks & results",
     skills: "Skills",
     education: "Education",
     awards: "Honors & Awards",
@@ -190,7 +190,7 @@ export const en: CVContent = {
     devLog: "Dev log",
     allResearch: "View all research",
     researchTitle: "Research",
-    researchIntro: "Digital-humanities research — presentation deck and results analysis.",
+    researchIntro: "Research — presentation decks and results analysis.",
     backResearch: "Research",
     viewPresentation: "Presentation",
     viewSource: "Source (GitHub)",

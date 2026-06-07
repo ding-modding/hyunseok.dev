@@ -20,8 +20,8 @@ export const researchProjects: ResearchProject[] = [
     title: { ko: "Reddit vs Moltbook", en: "Reddit vs Moltbook" },
     date: "2026-06-07",
     label: {
-      ko: "디지털 인문학 · 2026",
-      en: "Digital Humanities · 2026",
+      ko: "독립 연구 · 2026",
+      en: "Independent research · 2026",
     },
     summary: {
       ko: "인간(Reddit) vs AI 에이전트(Moltbook) — 두 플랫폼의 글·대화·행동은 어떻게 다른가. distant reading 비교 분석.",

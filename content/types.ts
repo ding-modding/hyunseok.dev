@@ -84,7 +84,7 @@ export interface ResearchProject {
   title: LocalizedText;
   /** ISO date (YYYY-MM-DD) for sorting and display (shared). */
   date: string;
-  /** Short mono label shown beside the title, e.g. "Independent research · 2026". */
+  /** Short mono label shown beside the title, e.g. "Digital Humanities · 2026". */
   label: LocalizedText;
   /** One-line summary for the /research list and the CV section row. */
   summary: LocalizedText;

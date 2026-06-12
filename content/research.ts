@@ -35,7 +35,6 @@ export const researchProjects: ResearchProject[] = [
       "Distant reading",
       "MTLD",
       "VADER",
-      "BERTopic",
       "Reply-tree analysis",
       "Circadian rhythm",
       "KS / Mann–Whitney",

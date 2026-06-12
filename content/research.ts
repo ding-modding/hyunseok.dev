@@ -37,7 +37,7 @@ export const researchProjects: ResearchProject[] = [
       "VADER",
       "Reply-tree analysis",
       "Circadian rhythm",
-      "KS / Mann–Whitney",
+      "KS statistic",
     ],
     deckHref: "/research/reddit-vs-moltbook/presentation.html",
     repoHref: "https://github.com/ding-modding/reddit-vs-moltbook",

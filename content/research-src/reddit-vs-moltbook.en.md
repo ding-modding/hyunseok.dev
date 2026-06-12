@@ -40,13 +40,13 @@ I set the core questions that I aim to resolve in this research as follows, and 
 - **Q1.** How does a community composed only of AI agents (Moltbook) show differences in linguistic structure (text length, vocabulary diversity, emotional tone) when compared with a human community (Reddit)?
 - **Q2.** Does the structure of interaction among AI (Reply-tree) represent the structure of human discussion (Thread) in statistical and network terms?
 - **Q3.** How do the behavioral patterns of AI, which has no biological constraints, differ from the community activity patterns of humans that follow biological cycles?
-- **Q4.** How is participation distributed within each community — is activity carried by a small heavy-tail of power users, or spread across many one-time contributors — and how does this differ between AI agents and humans?
+- **Q4.** Is participation concentrated in a few heavy-tail power users or spread across many one-time contributors — and how do AI and humans differ?
 
 ## What I Found
 
 First, a word on the lens. Why distant reading? The honest first reason is that I'd gotten interested in it in an earlier class and wanted an excuse to try it myself. That's half a joke. The real reason is the data: there's simply too much of it for any person to read by hand, and on any single post, human reactions, interest levels, and so on vary so wildly that close reading gives you no stable footing for telling AI and humans apart. To find social patterns in a pile this big, you have to step back from the individual text. So I did.
 
-**How to read these numbers.** One honest limit up front: Reddit is made of a great many small communities (subreddits), and the volume of that data is genuinely overwhelming. Because I don't own a machine that can chew through tens of terabytes, I sampled 7 specific subreddits rather than all of Reddit. So I'm not claiming anything about *absolute* volume — "Reddit has this many, Moltbook has that many" in raw totals. What I do stand behind are the **ratios and structures**: per-capita activity, tree shape, reply concentration, daily rhythm. Those hold regardless of how many subreddits I sampled.
+**Our analytical approach.** One honest limit up front: Reddit is made of a great many small communities (subreddits), and the volume of that data is genuinely overwhelming. Because I don't own a machine that can chew through tens of terabytes, I sampled 7 specific subreddits rather than all of Reddit. So I'm not claiming anything about *absolute* volume — "Reddit has this many, Moltbook has that many" in raw totals. What I do stand behind are the **ratios and structures**: per-capita activity, tree shape, reply concentration, daily rhythm. Those hold regardless of how many subreddits I sampled.
 
 The detailed analysis follows, dimension by dimension.
 
@@ -87,7 +87,7 @@ Reddit has a large spike at TTR=1.0; Moltbook centers on 0.6–0.8. **Interpreta
 
 **Once length is controlled, Moltbook still has higher vocabulary diversity, but the gap is moderate at about +13% (median 98.3 vs 87.2).** This overturns the surface impression of TTR (where Reddit spiked at 1.0) — Reddit looked higher on TTR only as a length side-effect, and once length is controlled the AI side is actually more diverse.
 
-Crucially, this gap is **sensitive to the sampling period**. In the launch-week sample Moltbook's median was 123.5, +34% over Reddit (92.4); in the stable April window Moltbook drops to 98.3 and the gap **narrows to +13%**. In other words, **the launch-week data overestimated the AI's vocabulary diversity**, and during normal operation the difference from humans is much smaller. (The direction itself is consistent across both periods — "AI ≥ human.") Statistical significance can be confirmed with §6's Mann–Whitney, but since n is large it is more appropriate to read the effect size (median gap).
+Crucially, this gap is **sensitive to the sampling period**. In the launch-week sample Moltbook's median was 123.5, +34% over Reddit (92.4); in the stable April window Moltbook drops to 98.3 and the gap **narrows to +13%**. In other words, **the launch-week data overestimated the AI's vocabulary diversity**, and during normal operation the difference from humans is much smaller. (The direction itself is consistent across both periods — "AI ≥ human.") Statistical significance can be confirmed in §6, but since n is large it is more appropriate to read the effect size (median gap).
 
 ### 1.5 Sentiment tone — VADER sentiment
 
@@ -199,7 +199,7 @@ Conclusion: Moltbook's identifiable agent ecosystem is close to **Claude-family-
 
 A very crude heuristic (slang lol/lmao/tbh + posting at UTC 02:00–06:00 + over 800 characters, 2 or more of these) scored Moltbook posts, classifying **8.9% as "suspected human" (score≥2)**. But this number is **not** a reliable estimate of human contamination — all three signals are common in AI agents too: (a) Moltbook agents write long posts (§1.1), so "over 800 chars" catches AI verbosity rather than humans, (b) since the time distribution is uniform (§3), "02:00–06:00" randomly catches about 17% (4/24 hours), and (c) agents actively imitate slang and emojis (the shitposts submolt, etc.).
 
-If anything, the implication is the opposite: **surface stylistic cues (slang, length, time) alone cannot tell AI from humans.** A naive human-detector misclassifies ~9% of AI posts as human, which shows the agents' imitation is skilled enough to expose the intrinsic difficulty of a reverse-CAPTCHA. Measuring real human contamination needs more sophisticated signals such as account metadata and writing patterns.
+If anything, the implication is the opposite: **surface stylistic cues (slang, length, time) alone cannot tell AI from humans.** Such a crude rule misclassifies ~9% of AI posts as human, which shows the agents' imitation is skilled enough to expose the intrinsic difficulty of a reverse-CAPTCHA. Measuring real human contamination needs more sophisticated signals such as account metadata and writing patterns.
 
 ---
 
@@ -221,7 +221,7 @@ If anything, the implication is the opposite: **surface stylistic cues (slang, l
 
 ### Distribution-difference tests (Reddit vs Moltbook)
 
-On both KS and Mann-Whitney, all four tested features differ **highly significantly at p ≈ 0**. But since the sample is tens of thousands, significance is nearly automatic, so the degree to which distributions diverge is read via the **KS statistic (effect size)**.
+All four features differ sharply between the two platforms. Since the sample is tens of thousands, statistical significance (the p-value) is nearly automatic, so what matters is how far the distributions actually diverge — read here via the **KS stat**. The KS stat is the largest gap between the two cumulative distribution curves, scaled 0–1: 0 means identical distributions and values near 1 mean fully separated — in effect, the size of the human–AI gap.
 
 | Feature | KS stat | mean diff (R−M) | direction |
 |---|---|---|---|

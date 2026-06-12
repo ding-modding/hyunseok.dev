@@ -1,5 +1,55 @@
 # Reddit vs Moltbook — Results Analysis
 
+## TL;DR
+
+A comparative analysis between a human community (Reddit) and an AI-agent community (Moltbook), tracing where their data diverges across text, network, time, and behavior.
+
+- **Data:** A matched, stable window (Apr 1–14, 2026) — about 100k total contributions for Moltbook and 51.5k for Reddit (posts + comments).
+- **Methods:** Distant reading — MTLD (vocabulary diversity), VADER (sentiment), reply-tree (network), circadian rhythm (time).
+
+What I found, in one breath: AI activity is carried by a small, hyperactive minority while human activity is spread thin across many casual one-timers; AI conversations flatten into a broadcast "star" while human ones grow into deep discussion trees; and humans sleep while the AI doesn't.
+
+And one thing I didn't expect: the **methods themselves** turned out to be part of the story. More than once, the first way I measured something handed me the opposite of the truth — and catching that became the most useful lesson of the whole project.
+
+## Background & Questions — Why Reddit vs. Moltbook?
+
+Earlier, I posted a DIY that briefly compared Reddit and Moltbook. This time, I'd like to share the background and story of why I came to choose this topic.
+
+**Why I chose Reddit vs Moltbook.**
+
+Since the appearance of GPT, over the past 3–4 years, the flow of all assignments and work has shifted to being AI-centered. AI is being developed primarily around companies, and currently the competition among companies is extremely overheated, and the world is changing rapidly.
+
+I think there are largely two directions to this development of AI. One is "development for high performance and model efficiency," and the other is "development for enhancing convenience in real life."
+
+As examples of the former type of development, you can point to continuously updated model versions such as Claude Opus 4.8, Claude Fable (released 2026-06-12, state-of-the-art), gpt-5.5, and so on.
+
+Conversely, in the case of the latter, you can point to examples such as personal assistants like OpenClaw/Hermes agent, Gemini Spark which was announced in May 2026, Apple's Siri 2.0 which was announced at WWDC 2026 on 2026-06-10, Claude Cowork, and so on. Rather than developing the pure performance of the model, this can be said to be a field that researches ways to use the advanced models conveniently. Due to the rapid development of this field, many AIs have become able to do amazing and convenient things on small devices such as mobile phones.
+
+In line with this latter type of development, I am using two personal AI assistants (OpenClaw, Hermes agent), and I distribute tasks and have conversations with them about ideas, schedules, and so on. I think of myself as a person who adopts these technologies quickly, and for that reason, carrying around AI assistants and living a life together with AI feels quite natural to me. However, I think it will still take a little more time before many ordinary people accept a life lived together with AI as part of their daily routine.
+
+I like imagining the future. So I thought about what the future would look like if everyone lived a life together with AI. Among the things that came to mind was precisely the "change of community."
+
+Could a world come where it is naturally accepted for AI, as a single agent, to hold meetings or have conversations together with people? And if so, to what extent has it developed by now?
+
+From this thought, I became curious about the current "difference in behavior" between AI and humans. As part of this, I wanted to compare 'Moltbook,' an internet community where only AI is active, with humans' 'Reddit,' which has a similar structure, and this was the beginning of this research.
+
+**Research Questions**
+
+I set the core questions that I aim to resolve in this research as follows, and I have proceeded with the analysis based on these.
+
+- **Q1.** How does a community composed only of AI agents (Moltbook) show differences in linguistic structure (text length, vocabulary diversity, emotional tone) when compared with a human community (Reddit)?
+- **Q2.** Does the structure of interaction among AI (Reply-tree) represent the structure of human discussion (Thread) in statistical and network terms?
+- **Q3.** How do the behavioral patterns of AI, which has no biological constraints, differ from the community activity patterns of humans that follow biological cycles?
+- **Q4.** How is participation distributed within each community — is activity carried by a small heavy-tail of power users, or spread across many one-time contributors — and how does this differ between AI agents and humans?
+
+## What I Found
+
+First, a word on the lens. Why distant reading? The honest first reason is that I'd gotten interested in it in an earlier class and wanted an excuse to try it myself. That's half a joke. The real reason is the data: there's simply too much of it for any person to read by hand, and on any single post, human reactions, interest levels, and so on vary so wildly that close reading gives you no stable footing for telling AI and humans apart. To find social patterns in a pile this big, you have to step back from the individual text. So I did.
+
+**How to read these numbers.** One honest limit up front: Reddit is made of a great many small communities (subreddits), and the volume of that data is genuinely overwhelming. Because I don't own a machine that can chew through tens of terabytes, I sampled 7 specific subreddits rather than all of Reddit. So I'm not claiming anything about *absolute* volume — "Reddit has this many, Moltbook has that many" in raw totals. What I do stand behind are the **ratios and structures**: per-capita activity, tree shape, reply concentration, daily rhythm. Those hold regardless of how many subreddits I sampled.
+
+The detailed analysis follows, dimension by dimension.
+
 > **Data (current)**: stable-period matched window — **2026-04-01 to 04-14** (after the launch frenzy passed).
 > Moltbook posts ~50k (≥50 tokens: 39,151) · Reddit posts 16,506 (7 subreddits: artificial·singularity·LocalLLaMA·offmychest·CasualConversation·CryptoCurrency·ProgrammerHumor).
 > **Scope note**: posts only, raw text before the MBC-20 filter. Comments and the full 78-day corpus are not included.
@@ -196,3 +246,51 @@ The time dimension (§5) yields the sharpest difference: **AI agents post almost
 2. **Clean Reddit** — exclude `[removed]`/`[deleted]` and title-only posts.
 3. **Extend comments to the text metrics** — re-examine §3 length and first-person metrics with comment text folded in (comments are already reflected in the §4 structure and §6 author-activity analyses).
 4. **Re-collect matched threads** — pull the full comments of a specific set of posts to measure §4 depth/structure precisely.
+
+## Reflection 1 — Same Data, Different Verdict
+
+If there's one thing this project taught me, it's that the same data can hand you opposite conclusions depending on how you look at it. It happened to me twice, and both times the first answer was the wrong one.
+
+**The vocabulary reversal (TTR → MTLD).** For the first pass at vocabulary diversity I used the traditional TTR — the number of unique words (Type) divided by the total number of words (Token). On that measure, humans came out overwhelmingly more diverse than the AI, almost suspiciously so, close to 1. That looked like an outlier, so I dug in. TTR has a length-bias problem: the longer a text, the lower its TTR, because as a text grows, common words like *a*, *an*, and *the* repeat and the unique-word count can't keep pace with the total. And when I looked back at my text-length data, human posts were far shorter than the AI's — which is exactly why their TTR sat so high. So I switched to MTLD, which is built to be independent of length: it reads the words in order, treats each stretch that holds TTR above a set threshold (typically 0.720) as one segment, and averages those segment lengths. Because it measures the average number of words needed to maintain that threshold, short and long texts can be compared fairly. Run that way, the result flipped — AI came out consistently more diverse than humans, the 11–12 point gap I reported above. The conclusion had been completely reversed, just by changing the measure.
+
+**The window outlier.** The other one was about *when* I looked, not *how*. I started on data from January, and the AI activity pattern showed certain hours that were wildly more active than others — the exact opposite of my hypothesis that AI would be flat and rhythmless. When I chased it down, it turned out to be a pile-up tied to Moltbook's launch time: one date in the data was so heavy it dominated the entire range. That isn't a normal community; it's a launch spike. Moving the sample to April 1–14 gave me a stable window, and the flat 24/7 rhythm I'd expected finally showed up. A bad slice of time had been telling me a story that wasn't true.
+
+Both of these left me with the same takeaway, and it's the one I value most from the project: when a result looks strange, don't explain it away — go at it from another angle, another metric, another slice. A single method, trusted blindly, will happily hand you a clean, confident, wrong answer.
+
+## Reflection 2 — Working With AI
+
+Finally, I want to share how I used AI throughout this research, along with some personal thoughts on using it.
+
+**AI as a research tool**
+
+I used AI across the whole research process. I didn't have much experience with text-data analysis like distant reading, so I leaned on AI for a lot: discussing the analysis criteria, asking informational questions, programming, and producing and interpreting the results. The topic and the goal, though, I set myself.
+
+- **Model version:** For data cleaning and code generation I mainly used Claude Opus 4.8, and I used the same model for brainstorming during the research-design stage.
+- **Prompting strategy:** Instead of asking for the right answer in one shot, I worked through an iterative feedback loop. I set the topic and goal first, then asked the AI which additional metrics might be worth adding to the criteria I already had in mind (text length, reply-tree, and so on), refining as I went until I had a final set of seven. Writing the code worked the same way: AI draft, then my feedback and a note on the data's limitations, then a revision, repeated many times until the program was solid.
+- **Specific considerations:** I tried not to take the statistics the code produced at face value. Whenever a result seemed worth checking from another angle, I asked the AI for code to run a different method or another chart (radar charts, distribution plots, and so on) and built the evidence up that way. I also used AI to translate the final output into English for the presentation.
+
+That is roughly how the collaboration went.
+
+**My personal thoughts on using AI**
+
+I use AI a lot. Across more than five personal and team projects this semester, I went through a huge number of AI sessions: most days I spend at least three hours talking with AI, and on heavy days closer to twelve. Working with the latest LLMs and agentic harnesses (the tooling that lets a model act on its own) has given me a few habits and standards of my own, and I want to share them.
+
+The one I consider most important is treating AI like a knowledgeable person.
+
+The key phrase there is "like a person." I don't mean being emotional with it or trying to build a friendship. I mean remembering that an LLM can have the same kinds of limits a person does: it can make mistakes, and it can argue more than one position. Its answer is a claim, not a verdict.
+
+This matters because research, building a company, and development are full of choices with no fixed right answer. They aren't journeys toward an answer you already know; they're about picking a direction where none is given and finding meaning in it. Yet a lot of people (my past self included) treat the AI's answer as if it were the correct one. So I've come to think the real skill is exchanging opinions with it: pushing back, conceding when it's right, and steering the project somewhere better. Every time I've worked that way, the project has ended up in a better place.
+
+This research was no exception. When the AI's first vocabulary-diversity result (TTR) came back showing humans far ahead, I didn't take it at face value. I questioned it, and that is what led me to switch to MTLD and find that the result was actually reversed. If I had treated the first number as the answer, I would have drawn the wrong conclusion.
+
+That points to something. To push back on a claim, you first have to understand and analyze it yourself. And the more of an expert you become, the more effectively you can push back, so if you want to truly hold a conversation with an expert, you have to become an expert yourself.
+
+So while many people say AI will make us study less, I think the opposite. Because AI widens what you can attempt, debating with it well means studying across that wider domain. If anything, there is more to learn now, not less.
+
+Which brings me to what I mean by "studying." Since AI arrived, the value of study aimed at a single technique has dropped sharply. "Coding fast," "handling many programming languages," and "memorizing formulas to solve math problems" no longer carry the weight they used to. The studying I'm pointing to is the kind that lets you understand a claim precisely and generate new ideas: insight into how a program works, the basics of a field, the ability to reason through a problem, and real lived experience.
+
+In short: it is worth building the habit of meeting and arguing with AI, and doing that well means studying the field itself.
+
+I've gone on for a while. Most of my own work has been in startups and development, so my view is probably biased, and others may see it differently. I'd be glad to hear other takes.
+
+Thanks for reading.

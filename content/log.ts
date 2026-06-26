@@ -16,14 +16,14 @@ export const logPosts: LogPost[] = [
   {
     slug: "teamplo-5-weeks",
     title: { ko: "팀플로 / Teamplo — 개발 일지", en: "Teamplo — Dev Log" },
-    date: "2026-06-04",
+    date: "2026-06-23",
     summary: {
-      ko: "개인 todo PWA에서 팀 중심 v3, 그리고 v4 캘린더까지 — 7주 개발 일지.",
-      en: "From a personal to-do PWA to a team-first v3, then a v4 calendar — a 7-week dev log.",
+      ko: "개인 todo PWA에서 팀 중심 v3, v4 캘린더, 그리고 팀 허브·공유 링크까지 — 10주 개발 일지.",
+      en: "From a personal to-do PWA to a team-first v3, a v4 calendar, then a team hub and share links — a 10-week dev log.",
     },
     meta: {
-      ko: "기간: 2026-04-13 → 2026-06-04 · 약 7주",
-      en: "Span: 2026-04-13 → 2026-06-04 · ~7 weeks",
+      ko: "기간: 2026-04-13 → 2026-06-23 · 약 10주",
+      en: "Span: 2026-04-13 → 2026-06-23 · ~10 weeks",
     },
     phases: [
       {
@@ -291,21 +291,89 @@ export const logPosts: LogPost[] = [
           },
         ],
       },
+      {
+        heading: {
+          ko: "6기 — 팀 허브 & 공유 링크 (6/5~6/23)",
+          en: "Phase 6 — Team hub & share links (6/5–6/23)",
+        },
+        intro: {
+          ko: "v4 런치패드 라인 — 흩어진 팀 자원을 좌측 레일 하나로 모으고, 팀 바깥 사람도 볼 수 있는 공유 링크까지 열었다.",
+          en: "The v4 launchpad line — gathering scattered team resources into a single left rail, then opening it up with share links anyone outside the team can view.",
+        },
+        bullets: [
+          {
+            date: "6/5",
+            text: {
+              ko: "교차팀 캘린더에서 각 팀 캘린더로 바로 가는 범례 링크, Ctrl+Space/Ctrl+Enter로 새 할 일 줄을 넣고 @배정까지 한 흐름으로 (PR #23)",
+              en: "Legend links from the cross-team calendar straight into each team's calendar; Ctrl+Space/Ctrl+Enter to drop in a new task line and @-assign in one flow (PR #23)",
+            },
+          },
+          {
+            date: "6/9",
+            text: {
+              ko: "/me 리스트 전면 리디자인 — 세로 팀 네비(전체·개인·팀)로 전환, 모바일은 공용 바텀시트. v4.1 (PR #24)",
+              en: "/me list redesign — switched to a vertical team nav (all / personal / teams); a shared bottom sheet on mobile. v4.1 (PR #24)",
+            },
+          },
+          {
+            date: "6/18",
+            text: {
+              ko: "Track A 팀 허브 런치패드 — 좌측 레일에 고정 링크(team_links)·캘린더·페이지 네비, 모바일 드로어, 806px 중앙 정렬 에디터, 링크 CRUD, DnD 재정렬, 링크·할일 실시간 동기화, 게스트 읽기 전용까지. v4.2 (PR #26)",
+              en: "Track A team-hub launchpad — pinned links (team_links), calendar, and page nav in a left rail; mobile drawer; an 806px centered editor; link CRUD; drag-to-reorder; realtime link/task sync; read-only for guests. v4.2 (PR #26)",
+            },
+          },
+          {
+            date: "6/18",
+            text: {
+              ko: "Track B 익명 보기 전용 공유 링크 — access_grants + resolveGrant 초크포인트, /view/<slug>/<token>에서 멤버 화면을 그대로 읽기 전용으로 재사용, 실시간 반영·발급·회수. v4.3 (PR #27)",
+              en: "Track B anonymous view-only share link — access_grants + a resolveGrant chokepoint, /view/<slug>/<token> reusing the member chrome read-only, live updates, mint/revoke. v4.3 (PR #27)",
+            },
+          },
+          {
+            date: "6/23",
+            text: {
+              ko: "디자인 폴리시 일괄 — 편집↔뷰 스크롤 동기화, 뷰어 체크박스·마감일 정규화, 마감 태그를 레일·캘린더·리스트에서 (D-5, 06/20)로 통일, 날짜 피커 배치 보정. v4.3.1 (PR #29)",
+              en: "Design-polish batch — edit↔view scroll sync, normalized viewer checkboxes/due dates, unified the due tag to (D-5, 06/20) across rail, calendar, and list, fixed date-picker placement. v4.3.1 (PR #29)",
+            },
+          },
+          {
+            date: "6/23",
+            text: {
+              ko: "게스트 보기 레일이 created_at이 아니라 멤버가 정한 드래그 순서를 따르도록 수정 — 공유 링크가 출시 후 줄곧 페이지 순서를 잘못 보여주던 버그. v4.3.2 (PR #28)",
+              en: "Fixed the guest view rail to follow the members' drag order instead of created_at — the share link had shown the wrong page order since launch. v4.3.2 (PR #28)",
+            },
+          },
+          {
+            date: "6/23",
+            text: {
+              ko: "편집 페이지 폴리시 — 넓은 좌우 거터, 본문 폰트 mono→Pretendard(체크박스는 열 정렬 위해 mono 유지), 보조 동작을 더보기(⋯) 메뉴로, 할 일 행에 우측 날짜 칩 하나로 통일. v4.3.3 (PR #30)",
+              en: "Edit-page polish — wider gutters, body font mono→Pretendard (checkboxes stay mono so columns align), secondary actions folded into a 더보기 (⋯) menu, one right-edge date chip per task row. v4.3.3 (PR #30)",
+            },
+          },
+          {
+            date: "6/23",
+            text: {
+              ko: "보기 전용 링크 재확인 — 발급 토큰을 저장해 공유 모달을 다시 열면 같은 링크를 다시 보여줌(멤버 전용). v4.4 (PR #31)",
+              en: "Re-showable view-only link — store the issued token so the share modal can show the same link again on reopen (member-only). v4.4 (PR #31)",
+            },
+          },
+        ],
+      },
     ],
     diagram: {
-      ko: `v0 PWA ──피벗──▶ 팀플로 v3 ──인프라 교체──▶ 도그푸드 ──▶ v4 캘린더
-개인 todo       팀 중심        Yjs + CM6       회고        팀원 가시성`,
-      en: `v0 PWA ──pivot──▶ Teamplo v3 ──infra swap──▶ dogfood ──▶ v4 calendar
-personal todo     team-first      Yjs + CM6      retro      teammate visibility`,
+      ko: `v0 PWA ──피벗──▶ 팀플로 v3 ──인프라 교체──▶ v4 캘린더 ──▶ 팀 허브·공유 링크
+개인 todo       팀 중심        Yjs + CM6       팀원 가시성     런치패드·보기 전용`,
+      en: `v0 PWA ──pivot──▶ Teamplo v3 ──infra swap──▶ v4 calendar ──▶ team hub · share links
+personal todo     team-first      Yjs + CM6      teammate view    launchpad · view-only`,
     },
     closing: [
       {
-        ko: "현재: v4 캘린더 + 드래그 스케줄링 라이브, 모바일 폴리시·태스크 로우 대칭·마케팅 홈 제품 갤러리까지. 다음은 규칙 기반 알림 + 첫 유료 기능. 카카오 봇은 파트너십 심사 대기.",
-        en: "Now: v4 calendar + drag-to-schedule is live, through mobile polish, task-row symmetry, and the marketing-home product gallery. Next up: rule-based notifications + the first paid feature. The Kakao bot is awaiting partnership review.",
+        ko: "현재: 팀 허브 런치패드(고정 링크·DnD·실시간)와 익명 보기 전용 공유 링크까지 라이브. 다음은 공유 링크 Phase 2(편집 권한·카카오 포스팅·MCP 쓰기)와 규칙 기반 알림. 카카오 봇은 파트너십 심사 대기.",
+        en: "Now: the team-hub launchpad (pinned links, drag-reorder, realtime) and an anonymous view-only share link are live. Next: share-link Phase 2 (edit grants, Kakao posting, MCP write) and rule-based notifications. The Kakao bot is awaiting partnership review.",
       },
       {
-        ko: "7주 내내 Claude Code로 백엔드·프론트·OAuth·실시간을 병렬로 풀었다.",
-        en: "For all 7 weeks, I worked backend, frontend, OAuth, and real-time in parallel with Claude Code.",
+        ko: "10주 내내 Claude Code로 백엔드·프론트·OAuth·실시간을 병렬로 풀었다.",
+        en: "For all 10 weeks, I worked backend, frontend, OAuth, and real-time in parallel with Claude Code.",
       },
     ],
   },

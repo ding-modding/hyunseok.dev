@@ -1,0 +1,111 @@
+/*
+ * Résumé stylesheet — shared by resume.html (EN) and resume-ko.html (KO).
+ *
+ * Rendered to public/resume.pdf / public/resume-ko.pdf via the gstack browse
+ * binary (see resume/README.md). Self-hosts STATIC Pretendard (KO + Latin
+ * body) and Geist Mono (dates / URLs / tech) so Chromium embeds them as CID
+ * TrueType — variable fonts embed as Type 3 and break ATS text extraction.
+ *
+ * Design tokens mirror docs/DESIGN.md (engineered-minimal, one accent green).
+ * Two A4 pages is fine; .item/.award break-inside:avoid keeps entries whole.
+ */
+
+@font-face { font-family: "Pretendard"; font-weight: 400; font-style: normal; font-display: block; src: url("fonts/Pretendard-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 500; font-style: normal; font-display: block; src: url("fonts/Pretendard-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 600; font-style: normal; font-display: block; src: url("fonts/Pretendard-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 700; font-style: normal; font-display: block; src: url("fonts/Pretendard-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Pretendard"; font-weight: 800; font-style: normal; font-display: block; src: url("fonts/Pretendard-ExtraBold.woff2") format("woff2"); }
+@font-face { font-family: "Geist Mono"; font-weight: 400; font-style: normal; font-display: block; src: url("fonts/GeistMono-Regular.woff2") format("woff2"); }
+
+:root {
+  --text: #16181B;
+  --body: #2A2D31;
+  --muted: #6B6F76;
+  --faint: #9A9DA3;
+  --border: #E6E6E2;
+  --accent: #0F9D4F;
+}
+
+/* @page margin (not body padding) so every page of a multi-page résumé gets
+   the same gutter. */
+@page { size: A4; margin: 10mm 13mm 9mm; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  font-family: "Pretendard", sans-serif;
+  color: var(--text);
+  background: #fff;
+  padding: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keep an entry whole; never split a heading from its first row. */
+.item, .award { break-inside: avoid; }
+.section-label { break-after: avoid; }
+/* Keep a whole section together — moves to the next page instead of splitting
+   mid-section (e.g. Education). */
+.keep-whole { break-inside: avoid; }
+
+a { color: inherit; text-decoration: none; }
+
+/* ---- Header ---- */
+.name { font-weight: 800; font-size: 35px; letter-spacing: -0.012em; line-height: 1.04; }
+.tagline { font-size: 14px; color: var(--text); margin-top: 6px; }
+.contact { font-family: "Geist Mono", "Pretendard", monospace; font-size: 11.5px; color: var(--muted); margin-top: 8px; }
+
+/* ---- Sections ---- */
+section { margin-top: 16px; }
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 7px;
+}
+
+/* ---- Items (experience / projects / research / education) ---- */
+.item { margin-top: 9px; }
+.item:first-of-type { margin-top: 0; }
+.item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; }
+.item-title { font-size: 13.5px; font-weight: 400; color: var(--text); }
+.item-title b { font-weight: 700; }
+.item-aside {
+  font-family: "Geist Mono", "Pretendard", monospace;
+  font-size: 11.5px;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+ul.bullets { list-style: none; margin-top: 3px; }
+ul.bullets li { position: relative; padding-left: 12px; color: var(--body); margin-top: 1.5px; line-height: 1.45; }
+ul.bullets li::before { content: "–"; position: absolute; left: 0; color: var(--faint); }
+
+.item-desc { color: var(--body); margin-top: 3px; line-height: 1.45; }
+.meta-mono { font-family: "Geist Mono", "Pretendard", monospace; font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+
+/* Coursework block under Education */
+.coursework { color: var(--body); margin-top: 5px; line-height: 1.5; }
+.coursework b { font-weight: 700; }
+
+/* ---- Skills ---- */
+.skill-row { display: flex; gap: 12px; margin-top: 3px; }
+.skill-label { font-weight: 700; width: 152px; flex-shrink: 0; }
+.skill-items { color: var(--body); }
+
+/* ---- Awards (compact, deliberately lighter than the deploy log) ---- */
+.award { display: flex; gap: 10px; margin-top: 2px; line-height: 1.4; }
+.award-year { font-family: "Geist Mono", "Pretendard", monospace; font-size: 11.5px; color: var(--muted); width: 38px; flex-shrink: 0; }
+.award-title { color: var(--body); }
+
+/* ---- Paragraph blocks (open source / writing) ---- */
+.para { color: var(--body); line-height: 1.45; margin-top: 2px; }
+.para b { font-weight: 700; }

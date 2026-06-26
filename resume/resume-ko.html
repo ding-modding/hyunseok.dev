@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>홍현석 — 이력서</title>
+<link rel="stylesheet" href="resume.css" />
+</head>
+<body>
+
+<header>
+  <div class="name">홍현석</div>
+  <div class="tagline">KAIST 전산학부 학부생</div>
+  <div class="contact">contact@hyunseok.dev · github.com/ding-modding · hyunseok.dev · 대한민국</div>
+</header>
+
+<section>
+  <div class="section-label">경력</div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>연구 인턴</b> — KIXLAB, KAIST Interaction Lab</span>
+      <span class="item-aside">2025.12 – 2026.03</span>
+    </div>
+    <ul class="bullets">
+      <li>삼성전자의 생성형 AI 기능에 대한 분류 체계 및 실험 프로토콜 설계 과제 연구 수행.</li>
+      <li>지적장애 학습자를 위한 교육영상 인지부하 자동 분석·적응 편집 파이프라인 VideoVerse 연구에 참여.</li>
+      <li>영상 세그먼트별 인지복잡도 요인을 Gemini VLM으로 점수화하는 프레임워크와, 학습자 능력 갭에 맞춰 편집 연산을 도출하는 다단계 파이프라인을 멘토와 공동 설계·구현.</li>
+      <li>VLM+SAM 기반 객체 추적·제거 파이프라인을 담당.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>팀장</b> — Teamplo · Mad on</span>
+      <span class="item-aside">2026.03 – 현재</span>
+    </div>
+    <ul class="bullets">
+      <li>회의록·할 일·캘린더가 맞물리는 팀플 협업 도구. P0 사용자 인터뷰 후 '개인 todo'에서 '팀 중심 협업 도구'로 피벗.</li>
+      <li>기존 할 일을 세부 할 일로 자동 분해해 주는 AI 기능 제공.</li>
+    </ul>
+    <div class="meta-mono">Next.js · PostgreSQL · Yjs · CodeMirror 6</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>팀장</b> — Timeschool · Mad on</span>
+      <span class="item-aside">2024.08 – 2026.03</span>
+    </div>
+    <ul class="bullets">
+      <li>야간자율학습 관리 웹 플랫폼 Timeschool 개발·운영. 인천진산과학고와 서비스 계약 체결, 3년째 운영.</li>
+      <li>Node.js 백엔드 리드, React/Vite 프론트엔드 기여. 매 학기 사용자 피드백 기반으로 개선.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">연구</div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>Reddit vs Moltbook</b> — KAIST</span>
+      <span class="item-aside">hyunseok.dev/research</span>
+    </div>
+    <ul class="bullets">
+      <li>인간(Reddit) vs AI 에이전트(Moltbook) 소셜 플랫폼의 distant-reading 비교 분석. 텍스트·네트워크·시간·작성자 활동·구동 모델 5개 차원에서 인간과 AI 데이터가 어떻게 갈리는지 측정. 발표 자료 + 결과 분석 공개.</li>
+      <li>두 플랫폼에서 총 15만여 개의 게시물·댓글을 수집·분석.</li>
+    </ul>
+    <div class="meta-mono">Distant reading · MTLD · VADER · Reply-tree analysis · KS statistic</div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>비동기 Multi-Agent RL 기반 이종 CPU 스케줄링</b> — KAIST, 팀(3인)</span>
+      <span class="item-aside">2026.03 – 2026.06</span>
+    </div>
+    <ul class="bullets">
+      <li>이종 코어(P/E 코어) CPU 스케줄링을 비동기 Multi-Agent RL 문제로 모델링 — 각 코어를 에이전트로 두고 MAPPO 기반 Agent-Centric Actor-Critic(ACAC) 정책 적용.</li>
+      <li>실험 환경 및 보상 함수 설계, 실험 진행, 결과 분석 및 업데이트 전담.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>SGLP — Sigmoidal Gradient Length Prompting</b> — KAIST</span>
+      <span class="item-aside">2025.03 – 2025.06</span>
+    </div>
+    <ul class="bullets">
+      <li>선행연구(DPL)의 복잡한 2단계 프롬프트 학습을 단일 end-to-end 파이프라인으로 통합한 새 기법 SGLP 제안·개발.</li>
+      <li>이중 수준 최적화(bilevel optimization) 기반 시그모이드 게이팅으로 레이어별 최적 프롬프트 길이를 자동 탐색.</li>
+      <li>학습 파라미터를 7배 줄이면서(0.258M → 37K) 유의미한 정확도 달성(EuroSAT 91.83%).</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>딥러닝을 이용한 탑승자의 자세에 따른 전동킥보드 안정성에 관한 연구</b> — 인천진산과학고등학교</span>
+      <span class="item-aside">2023.03 – 2023.07</span>
+    </div>
+    <ul class="bullets">
+      <li>Unity에 전동킥보드 동역학을 시뮬레이션하는 커스텀 강화학습 환경·보상 체계 설계·구현.</li>
+      <li>Unity ML-Agents 프레임워크로 심층 강화학습(RL)을 적용해 모델 학습.</li>
+      <li>경사로 주행 시 안정성·안전을 높이는 최적 라이더 자세를 제안.</li>
+      <li>인천과학전람회 특상.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">프로젝트</div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>MatchA</b> — 핵심 개발자</span>
+      <span class="item-aside">matchall.co.kr</span>
+    </div>
+    <ul class="bullets">
+      <li>단체 일정 관리 — 워크스페이스에서 그룹·캘린더를 폴더처럼 정리하고, 시간투표·When2Meet 방식으로 일정을 조율.</li>
+    </ul>
+    <div class="meta-mono">Next.js · Vercel</div>
+  </div>
+</section>
+
+<section class="keep-whole">
+  <div class="section-label">학력</div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>KAIST 전산학부</b> — 컴퓨터공학 학사 과정</span>
+      <span class="item-aside">2024.02 – 현재</span>
+    </div>
+    <ul class="bullets">
+      <li>GPA 3.96 / 4.3 (82학점)</li>
+      <li><b>주요 이수 과목</b> — CS.30701 딥러닝 개론 (A+) · CS.30706 머신러닝 (A+) · CS.30200 프로그래밍 언어 (A+) · CS.30000 알고리즘 개론 (A+) · CS.30101 전산기조직 (A+) · CS.20004 이산수학 (A0) · CS.20006 데이터 구조 (A0) · MAS.10009 선형대수학개론 (A+) · MAS.10001 미적분학I (A+) · MAS.10002 미적분학II (A+)</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head">
+      <span class="item-title"><b>인천진산과학고등학교</b> — 조기졸업</span>
+      <span class="item-aside">2022.03 – 2024.02</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">기술</div>
+  <div class="skill-row"><span class="skill-label">언어</span><span class="skill-items">C, C++, C#, Python, Java, TypeScript, JavaScript</span></div>
+  <div class="skill-row"><span class="skill-label">프레임워크 · 도구</span><span class="skill-items">React, Next.js, Node.js, Tailwind CSS, PyTorch</span></div>
+  <div class="skill-row"><span class="skill-label">워크플로</span><span class="skill-items">AI 활용 개발 (Claude Code, Codex)</span></div>
+</section>
+
+<section>
+  <div class="section-label">수상</div>
+  <div class="award"><span class="award-year">2025</span><span class="award-title">NYPC Code Battle — 상위 4.87%</span></div>
+  <div class="award"><span class="award-year">2024</span><span class="award-title">Dean's List (1·2학기)</span></div>
+  <div class="award"><span class="award-year">2024</span><span class="award-title">KAIST 총장상</span></div>
+  <div class="award"><span class="award-year">2023</span><span class="award-title">한국정보올림피아드(KOI) 은상 — 전국 12위 (고등부)</span></div>
+  <div class="award"><span class="award-year">2023</span><span class="award-title">ICT 어워드 코리아 — 대상 · 인천과학전람회 — 특상</span></div>
+  <div class="award"><span class="award-year">2022</span><span class="award-title">창의적 문제해결(CPS) 페스티벌 — 대상</span></div>
+</section>
+
+<section>
+  <div class="section-label">장학</div>
+  <div class="award"><span class="award-year">2024</span><span class="award-title">KAIST 총장 장학생 (KAIST Presidential Fellowship, KPF) — 소수 정예 최우수 학부생을 선발해 해외 명문대 서머 프로그램·학부생연구참여(URP)·리더십 교육·멘토링을 지원하는 총장 장학 프로그램</span></div>
+</section>
+
+<section>
+  <div class="section-label">오픈소스</div>
+  <div class="para"><b>gbrain</b> (github.com/garrytan/gbrain, 17.8k★) — OAuth public-client 흐름이 PKCE+RFC 7591 표준을 따르지 않아 일부 클라이언트 인증 실패. 진단 및 수정 PR이 v0.34.1.0에 머지.</div>
+</section>
+
+</body>
+</html>

@@ -16,7 +16,7 @@ export const en: CVContent = {
     name: "Hyunseok Hong",
     identity: "KAIST CS undergraduate. I build products people actually use.",
     nowLine: "Now — building Teamplo & MatchA",
-    location: "Daejeon, South Korea",
+    location: "South Korea",
     links: [
       { label: "GitHub", href: "https://github.com/ding-modding", glyph: "external" },
       { label: "contact@hyunseok.dev", href: "mailto:contact@hyunseok.dev", isEmail: true },
@@ -65,7 +65,7 @@ export const en: CVContent = {
         problem:
           "Task assignments for a university team project scatter across a KakaoTalk group chat. Knowing who owns what means scrolling back through messages, and the team's bottleneck never shows at a glance.",
         built:
-          "It started as a personal to-do app, but after P0 interviews with students at KAIST, SKKU, Korea University, and POSTECH it pivoted into a collaboration tool that makes a team's progress visible at a glance. Built v0→v3→v4 in 7 weeks — replaced a hand-rolled merge with Yjs CRDT and migrated the editor to CodeMirror 6. Built throughout with Claude Code.",
+          "Started as a personal to-do app, then pivoted after P0 user interviews into a collaboration tool that makes a team's progress visible at a glance. Built v0→v3→v4 — replaced a hand-rolled merge with Yjs CRDT and migrated the editor to CodeMirror 6. Built throughout with Claude Code.",
       },
     },
     {
@@ -119,7 +119,7 @@ export const en: CVContent = {
     {
       institution: "KAIST, School of Computing",
       period: "2024.02 — present",
-      note: "GPA 3.96 / 4.3 (82 credits) · Dean's List (1st & 2nd semester)",
+      note: "GPA 3.96 / 4.3 (82 credits)",
     },
     {
       institution: "Incheon Jinsan Science High School",
@@ -136,23 +136,20 @@ export const en: CVContent = {
           year: "2023",
           title: "Korean Olympiad in Informatics (KOI), Silver — 12th nationally (high-school division)",
         },
-        {
-          year: "2022",
-          title: "Korean Olympiad in Informatics (KOI), Bronze (high-school division)",
-        },
       ],
     },
     {
       label: "Honors & Scholarships",
       entries: [
+        { year: "2024", title: "Dean's List (1st & 2nd semester)" },
         { year: "2024", title: "KAIST President's Award" },
         { year: "2024", title: "KAIST Presidential Fellowship (KPF) — scholarship" },
         { year: "2023", title: "ICT Award Korea — Grand Prize" },
-        { year: "2022", title: "CPS (Creative Problem Solving) Festival — Grand Prize" },
         {
           year: "2023",
-          title: "Incheon Science Exhibition — award (e-scooter posture/stability deep-learning study)",
+          title: "Incheon Science Exhibition — Top Prize (e-scooter posture/stability deep-learning study)",
         },
+        { year: "2022", title: "CPS (Creative Problem Solving) Festival — Grand Prize" },
       ],
     },
   ],

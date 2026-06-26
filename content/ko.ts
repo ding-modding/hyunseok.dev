@@ -16,7 +16,7 @@ export const ko: CVContent = {
     name: "Hyunseok Hong",
     identity: "KAIST 전산학부 학부생. 실제 사용자가 쓰는 제품을 만든다.",
     nowLine: "현재 — Teamplo·MatchA 개발 중",
-    location: "대전, 대한민국",
+    location: "대한민국",
     links: [
       { label: "GitHub", href: "https://github.com/ding-modding", glyph: "external" },
       { label: "contact@hyunseok.dev", href: "mailto:contact@hyunseok.dev", isEmail: true },
@@ -65,7 +65,7 @@ export const ko: CVContent = {
         problem:
           "팀플 업무는 카카오톡 단톡방에 흩어짐. 회의가 끝나면 업무 분배가 메시지로 올라가지만, 누가 무엇을 맡았는지는 거슬러 올라가야 알 수 있음. 무엇보다 팀의 병목이 한눈에 보이지 않음.",
         built:
-          "처음엔 개인 To-do 앱. KAIST·성균관·고려대·POSTECH 재학생 P0 인터뷰 후 팀의 진행이 한눈에 보이는 협업 도구로 피벗. 7주에 v0→v3→v4를 빌드하며 자체 merge 로직을 Yjs CRDT로 교체하고 편집기를 CodeMirror 6로 마이그레이션. 개발 전 과정에 Claude Code 활용.",
+          "개인 To-do 앱으로 시작해, P0 사용자 인터뷰 후 팀의 진행이 한눈에 보이는 협업 도구로 피벗. v0→v3→v4를 빌드하며 자체 merge 로직을 Yjs CRDT로, 편집기를 CodeMirror 6로 마이그레이션. 개발 전 과정에 Claude Code 활용.",
       },
     },
     {
@@ -118,7 +118,7 @@ export const ko: CVContent = {
     {
       institution: "KAIST, School of Computing",
       period: "2024.02 — present",
-      note: "GPA 3.96 / 4.3 (82학점) · Dean's List (1·2학기)",
+      note: "GPA 3.96 / 4.3 (82학점)",
     },
     {
       institution: "인천진산과학고등학교",
@@ -132,17 +132,17 @@ export const ko: CVContent = {
       entries: [
         { year: "2025", title: "NYPC Code Battle — 상위 4.87%" },
         { year: "2023", title: "한국정보올림피아드(KOI) 은상 — 전국 12위 (고등부)" },
-        { year: "2022", title: "한국정보올림피아드(KOI) 동상 (고등부)" },
       ],
     },
     {
       label: "Honors & Scholarships",
       entries: [
+        { year: "2024", title: "Dean's List (1·2학기)" },
         { year: "2024", title: "KAIST 총장상" },
         { year: "2024", title: "KAIST Presidential Fellowship (KPF) — 장학" },
         { year: "2023", title: "ICT 어워드 코리아 — 대상" },
+        { year: "2023", title: "인천과학전람회 — 특상 (전동킥보드 자세·안정성 딥러닝 연구)" },
         { year: "2022", title: "창의적 문제해결(CPS) 페스티벌 — 대상" },
-        { year: "2023", title: "인천과학전람회 — 수상 (전동킥보드 자세·안정성 딥러닝 연구)" },
       ],
     },
   ],
